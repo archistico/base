@@ -4,9 +4,9 @@ Implementazione gestione route con coda in mysql.
 
 ## Install
 
-1. Copy this directory to your server/virtual host root
-2. Create a database called `routequeue` and execute the `routequeue.sql` dump
-4. Adjust your MySQL database/user information in `lib/mysql.php`
+1. Copia i file nel tuo server
+2. Crea un db chiamato `routequeue` e inviagli `routequeue.sql` 
+4. Sistema i dati di accesso in `lib/mysql.php`
 
 ## Server
 
