@@ -19,3 +19,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php)
 RewriteRule ^(.*)$ /index.php/$1 [L]
 ```
+
+## Credit
+  
+Basato su:
+- [ToroPHP](https://github.com/anandkunal/ToroPHP)
