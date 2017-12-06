@@ -28,6 +28,9 @@ Html_default::JUMBOTRON("Studio Archistico", "Base");
  * -----------------------------
  */
 
+Flashmessage::ADD($utentefk, $filename_corrente, 'ok', 'messaggio', 'SUCCESS');
+var_dump($_SESSION[$utentefk.'|'.$filename_corrente]);
+
 Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
 
 ?>

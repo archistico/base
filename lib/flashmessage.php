@@ -2,25 +2,27 @@
 
 class Flashmessage {
     public static function ADD($utente, $file, $titolo, $messaggio, $tipologia) {
-        
+        $name = $utente.'|'.$file;
+        if(empty($_SESSION[$name])) {
+            $_SESSION[$name] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
+        }        
     }
 
     public static function READ($utente, $file) {
-        // Array di messaggi
         $ret = [];
+        // Cerca il session con utente e file
+        $name = $utente.'|'.$file;
         
-        $titolo = 'Errore';
-        $messaggio = 'Manca 1';
-        $tipologia = 'ALERT';
-
-        $ret[] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
-
-        $titolo = 'Errore';
-        $messaggio = 'Manca 2';
-        $tipologia = 'ALERT';
-
-        $ret[] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
-
+        // Se non è vuoto
+        if(!empty($_SESSION[$name])) {
+            $titolo = $_SESSION[$name['titolo']];
+            $messaggio = $_SESSION[$name['messaggio']];
+            $tipologia = $_SESSION[$name['tipologia']];
+    
+            $ret[] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
+    
+        } 
+       
         return $ret;
     }
 }
