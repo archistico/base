@@ -8,7 +8,7 @@ class MySQL {
 
   public static function getInstance() {
     if (!self::$instance) {
-      self::$instance = new PDO('mysql:host=localhost;dbname=toroqueue', 'root', 'toor');
+      self::$instance = new PDO('mysql:host=localhost;dbname=base', 'root', 'toor');
       self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     return self::$instance;

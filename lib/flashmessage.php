@@ -1,11 +1,15 @@
 <?php
 
 class Flashmessage {
+
     public static function ADD($utente, $file, $titolo, $messaggio, $tipologia) {
         $name = $utente.'|'.$file;
-        if(empty($_SESSION[$name])) {
-            $_SESSION[$name] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
-        }        
+
+        if(empty($_COOKIE[$name])) {
+            setcookie($name, serialize([['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia]]), time()+3600);
+        } else {
+            setcookie($name, serialize([['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia]]), time()+3600);
+        }
     }
 
     public static function READ($utente, $file) {
@@ -14,13 +18,17 @@ class Flashmessage {
         $name = $utente.'|'.$file;
         
         // Se non è vuoto
-        if(!empty($_SESSION[$name])) {
-            $titolo = $_SESSION[$name['titolo']];
-            $messaggio = $_SESSION[$name['messaggio']];
-            $tipologia = $_SESSION[$name['tipologia']];
-    
-            $ret[] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
-    
+        if(!empty($_COOKIE[$name])) {
+
+            foreach(unserialize($_COOKIE[$name]) as $flash) {
+                $titolo = $flash['titolo'];
+                $messaggio = $flash['messaggio'];
+                $tipologia = $flash['tipologia'];
+
+                $ret[] = ['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia];
+            }
+
+            setcookie($name, null, -1, '/');
         } 
        
         return $ret;

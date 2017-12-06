@@ -27,57 +27,53 @@ Html_default::JUMBOTRON("Studio Archistico", "Base");
  *       CORPO FILE
  * -----------------------------
  */
-
-Flashmessage::ADD($utentefk, $filename_corrente, 'ok', 'messaggio', 'SUCCESS');
-var_dump($_SESSION[$utentefk.'|'.$filename_corrente]);
-
 Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
 
 ?>
-<div class='row'>
-<div class='col-md-12'>
+    <div class='row'>
+        <div class='col-md-12'>
 
-<strong>Queue Size:</strong> <span id="size"><?= $stats['size']; ?></span> | 
-<strong>Total Sends:</strong> <span id="sends"><?= $stats['sends']; ?></span> |
-<strong>Total Receives:</strong> <span id="receives"><?= $stats['receives']; ?></span><br/>
+            <strong>Queue Size:</strong> <span id="size"><?= $stats['size']; ?></span> |
+            <strong>Total Sends:</strong> <span id="sends"><?= $stats['sends']; ?></span> |
+            <strong>Total Receives:</strong> <span id="receives"><?= $stats['receives']; ?></span><br/>
 
-<hr />
+            <hr />
 
-<h2>Send</h2>
-<form action="./send" method="post">
-<div class='form-group'>
-<textarea class="form-control" name="payload"></textarea><br/>
-<input class="form-control" type="number" name="secondo"></input><br/>
-<input type="submit" value="Send" class='btn btn-block btn-lg'/>
-<div>
-</form>
+            <h2>Send</h2>
+            <form action="./send" method="post">
+                <div class='form-group'>
+                    <textarea class="form-control" name="payload"></textarea><br/>
+                    <input class="form-control" type="number" name="secondo"></input><br/>
+                    <input type="submit" value="Send" class='btn btn-block btn-lg'/>
+                    <div>
+            </form>
 
-<hr />
+            <hr />
 
-<h2>Receive</h2>
-<div id="payload"></div><br/>
-<input type="submit" value="Receive" onclick="receive(); return false;"  class='btn btn-block btn-lg'/>
+            <h2>Receive</h2>
+            <div id="payload"></div><br/>
+            <input type="submit" value="Receive" onclick="receive(); return false;"  class='btn btn-block btn-lg'/>
 
-</div>
-</div>
+        </div>
+    </div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript">
-function update() {
-  $.get("./stats", function(b) {
-    $('#size').html(b.size);
-    $('#sends').html(b.sends);
-    $('#receives').html(b.receives);
-  });
-}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        function update() {
+            $.get("./stats", function(b) {
+                $('#size').html(b.size);
+                $('#sends').html(b.sends);
+                $('#receives').html(b.receives);
+            });
+        }
 
-function receive() {
-  $.get("./receive", function(a) {
-    $('#payload').html(a.payload);
-    update();
-  });
-}
-</script>
+        function receive() {
+            $.get("./receive", function(a) {
+                $('#payload').html(a.payload);
+                update();
+            });
+        }
+    </script>
 
 
 <?php
