@@ -18,7 +18,6 @@ Html_default::JUMBOTRON("Studio Archistico", "Base");
  * -----------------------------
  */
 echo "emilie".BR;
-echo File::DIRNAME(__FILE__);
 
 /* -----------------------------
  *      FINE CORPO FILE

@@ -1,0 +1,41 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.pull-left {
+  float: left;
+  margin-left: 10px;
+}
+
+.rosso {
+  color: red;
+}
+
+.verde {
+  color: green;
+}
+
+.arancione {
+  color: orange;
+}
+
+.jumbotron {
+  border-radius: 0px;
+  padding: 1rem 2rem;
+}
+
+.paddingTop20 {
+  padding-top: 20px;
+}
+
+.paddingBottom20 {
+  padding-bottom: 20px;
+}
+
+.cronometro {
+  line-height: 80%;
+}
