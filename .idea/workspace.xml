@@ -16,6 +16,8 @@
       <change beforePath="$PROJECT_DIR$/controllers/saluta.php" afterPath="$PROJECT_DIR$/controllers/saluta.php" />
       <change beforePath="$PROJECT_DIR$/controllers/send.php" afterPath="$PROJECT_DIR$/controllers/send.php" />
       <change beforePath="$PROJECT_DIR$/controllers/stats.php" afterPath="$PROJECT_DIR$/controllers/stats.php" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
+      <change beforePath="$PROJECT_DIR$/css/stile.css" afterPath="$PROJECT_DIR$/css/stile.css" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change beforePath="$PROJECT_DIR$/lib/file.php" afterPath="$PROJECT_DIR$/lib/file.php" />
       <change beforePath="$PROJECT_DIR$/lib/flashmessage.php" afterPath="$PROJECT_DIR$/lib/flashmessage.php" />
@@ -208,6 +210,17 @@
               <item name="base" type="b2602c69:ProjectViewProjectNode" />
               <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -245,12 +258,12 @@
       <option name="presentableId" value="Default" />
       <updated>1512564946302</updated>
       <workItem from="1512564947896" duration="5759000" />
-      <workItem from="1512573630505" duration="2831000" />
+      <workItem from="1512573630505" duration="2923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8590000" />
+    <option name="totallyTimeSpent" value="8682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
