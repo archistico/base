@@ -2,8 +2,7 @@
 
 class Saluta {
     function get() {
-        // echo "Ciao Emilie";
-        // oppure
+        // Carica tutti i dati che servono nella vista
         $chi = "Emilie";
         include("views/saluta.php");
     }
