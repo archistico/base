@@ -1,10 +1,10 @@
 <?php
 
-require("handlers/dashboard_handler.php");
-require("handlers/receive_handler.php");
-require("handlers/send_handler.php");
-require("handlers/stats_handler.php");
-require("handlers/saluta_handler.php");
+require("controllers/dashboard.php");
+require("controllers/receive.php");
+require("controllers/send.php");
+require("controllers/stats.php");
+require("controllers/saluta.php");
 require("lib/mysql.php");
 require("lib/queries.php");
 require("lib/route.php");
@@ -14,9 +14,9 @@ RouteHook::add("404", function() {
 });
 
 Route::serve(array(
-    "/" => "DashboardHandler",
-    "/send" => "SendHandler",
-    "/receive" => "ReceiveHandler",
-    "/stats" => "StatsHandler",
-    "/saluta" => "SalutaHandler"
+    "/" => "Dashboard",
+    "/send" => "Send",
+    "/receive" => "Receive",
+    "/stats" => "Stats",
+    "/saluta" => "Saluta"
 ));

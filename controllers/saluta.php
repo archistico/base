@@ -1,6 +1,6 @@
 <?php
 
-class SalutaHandler {
+class Saluta {
     function get() {
         // echo "Ciao Emilie";
         // oppure
