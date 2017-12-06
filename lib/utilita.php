@@ -13,7 +13,8 @@ class Utilita {
         error_reporting(E_ALL);
 
         session_start();
-        $notices = [];
+
+        define("BR", "<br>");
     }
 
     public static function GET_CLIENT_IP() {

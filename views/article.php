@@ -17,9 +17,7 @@ Html_default::JUMBOTRON("Studio Archistico", "Base");
  *       CORPO FILE
  * -----------------------------
  */
-echo "emilie".BR;
-echo File::DIRNAME(__FILE__);
-
+echo $slug;
 /* -----------------------------
  *      FINE CORPO FILE
  * -----------------------------

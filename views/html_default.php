@@ -61,6 +61,7 @@ class Html_default {
         $menu = [
             'Home' => '/',
             'Saluta' => '/saluta',
+            'Article' => '/article/3',
         ];
 
         $linkHome = current($menu);
@@ -197,23 +198,13 @@ class Html_default {
         echo $html;
     }
 
-    public static function SHOW_NOTICES($notices, $linkback="") {
-        // Controllo se c'è il success
-        if(!empty($notices['ok'])) {
-            self::SUCCESS("OK!", $notices['ok']);
-            $notices=[];
-            if(!empty($linkback)) {
-                self::BUTTON("Torna indietro", $linkback);
+    public static function SHOW_NOTICES($messages) {
+        foreach($messages as $mes) {
+            if($mes['tipologia']=='SUCCESS') {
+                self::SUCCESS($mes['titolo'], $mes['messaggio']);
             }
-        }
-
-        // Se ci sono errori
-        if(!empty($notices)) {
-            foreach($notices as $notice) {
-                self::ALERT("ATTENZIONE!", $notice);
-            }
-            if(!empty($linkback)) {
-                self::BUTTON("Torna indietro", $linkback);
+            if($mes['tipologia']=='ALERT') {
+                self::ALERT($mes['titolo'], $mes['messaggio']);
             }
         }
     }

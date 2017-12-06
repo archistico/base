@@ -11,5 +11,6 @@ Route::serve(array(
     "/send" => "Send",
     "/receive" => "Receive",
     "/stats" => "Stats",
-    "/saluta" => "Saluta"
+    "/saluta" => "Saluta",
+    "/article/:alpha" => "Article",
 ));
