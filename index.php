@@ -14,4 +14,5 @@ Route::serve(array(
     "/stats" => "Stats",
     "/saluta" => "Saluta",
     "/article/:number" => "Article",
+    "/article/delete/:number" => "ArticleDelete",
 ));
