@@ -33,4 +33,20 @@ class Flashmessage {
        
         return $ret;
     }
+
+    public static function COUNT($utente, $file) {
+        $ret = 0;
+        // Cerca il session con utente e file
+        $name = $utente.'|'.$file;
+        
+        // Se non è vuoto
+        if(!empty($_COOKIE[$name])) {
+
+            foreach(unserialize($_COOKIE[$name]) as $flash) {
+                $ret += 1;
+            }
+        } 
+       
+        return $ret;
+    }
 }

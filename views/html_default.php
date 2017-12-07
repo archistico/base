@@ -64,6 +64,7 @@ class Html_default {
             'Home' => '/',
             'Saluta' => '/saluta',
             'Article' => '/article/3',
+            'Todo' => '/todo'
         ];
 
         $linkHome = current($menu);

@@ -12,6 +12,8 @@ require("controllers/send.php");
 require("controllers/stats.php");
 require("controllers/saluta.php");
 require("controllers/article.php");
+require("controllers/todo.php");
+
 require("lib/mysql.php");
 require("lib/queries.php");
 require("lib/route.php");
