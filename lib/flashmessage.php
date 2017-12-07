@@ -6,9 +6,9 @@ class Flashmessage {
         $name = $utente.'|'.$file;
 
         if(empty($_COOKIE[$name])) {
-            setcookie($name, serialize([['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia]]), time()+3600);
+            setcookie($name, serialize([['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia]]), time()+3600, "/");
         } else {
-            setcookie($name, serialize([['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia]]), time()+3600);
+            setcookie($name, serialize([['titolo' => $titolo, 'messaggio' => $messaggio, 'tipologia' => $tipologia]]), time()+3600, "/");
         }
     }
 

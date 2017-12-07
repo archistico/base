@@ -17,5 +17,6 @@ Route::serve(array(
     "/article/delete/:number" => "ArticleDelete",
     "/todo" => "Todo",
     "/todoadd" => "Todoadd",
+    "/todo/delete/:number" => "TodoDelete",
 
 ));

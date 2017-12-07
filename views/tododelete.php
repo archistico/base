@@ -29,29 +29,23 @@ Html_default::JUMBOTRON("Studio Archistico", "Todo");
  */
 Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
 
-?> 
+?>
+    <div class='box-body'>
     <div class='row'>
         <div class='col-md-12'>
-            <h1>New todo</h1>
-            <form action="./todoadd" method="post">
-                <div class='form-group'>
-                    <textarea class="form-control" name="todo"></textarea><br/>
-                    <input type="submit" value="Send" class='btn btn-block btn-lg'/>
-                <div>
-            </form>
+            <h1><?= $messaggio ?></h1>
+            <h6><?= $elemento ?></h6>
         </div>
     </div>
-
-    <div class='row'>
-        <div class='col-md-12'>
-            <h1>List todo</h1>
-            <?php
-                foreach($todos as $todo) {
-                    $id = $todo['id'];
-                    $descrizione = $todo['descrizione'];
-                    echo "$id : $descrizione | <a href='/todo/delete/$id'>X</a>".BR;
-                }
-            ?>
+    <div class='row paddingTop20'>
+        <div class='col-md-6'>
+            <a class='btn btn-block btn-secondary btn-lg' href='<?= $linkAnnulla ?>'>Annulla</a>
+        </div>
+        <div class='col-md-6'>
+        <form action="" method="post">
+        <input type="hidden" name="id" value="<?= $id ?>"/>
+        <input type="submit" value="Delete" class='btn btn-block btn-danger btn-lg'/>
+        </form>
         </div>
     </div>
 
