@@ -62,8 +62,6 @@ class Html_default {
 
         $menu = [
             'Home' => '/',
-            'Saluta' => '/saluta',
-            'Article' => '/article/3',
             'Todo' => '/todo'
         ];
 

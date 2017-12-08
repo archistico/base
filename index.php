@@ -7,16 +7,12 @@ RouteHook::add("404", function() {
     echo "<h1>Errore 404</h1>Risorsa non disponibile";
 });
 
+
 Route::serve(array(
-    "/" => "Dashboard",
-    "/send" => "Send",
-    "/receive" => "Receive",
-    "/stats" => "Stats",
-    "/saluta" => "Saluta",
-    "/article/:number" => "Article",
-    "/article/delete/:number" => "ArticleDelete",
+
+    "/" => "Home",
     "/todo" => "Todo",
-    "/todoadd" => "Todoadd",
+    "/todoadd" => "TodoAdd",
     "/todo/delete/:number" => "TodoDelete",
     "/todo/modify/:number" => "TodoModify",
 
