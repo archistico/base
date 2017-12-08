@@ -48,10 +48,10 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
             <table id='tabella' class='table table-bordered table-hover'>
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <th class="tdicon">#</th>
                     <th>Todo</th>
-                    <th>Mod.</th>
-                    <th>Canc.</th>
+                    <th class="tdicon">Mod.</th>
+                    <th class="tdicon">Canc.</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,10 +62,10 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
                     $descrizione = $todo['descrizione'];
                 ?>
                 <tr>
-                    <td><?= $id ?></td>
+                    <td class="tdicon"><?= $id ?></td>
                     <td><?= $descrizione ?></td>
-                    <td class="tdicon"><a class="btn-lg btn-warning" href='/todo/modify/<?= $id ?>'>M</a></td>
-                    <td class="tdicon"><a class="btn-lg btn-danger" href='/todo/delete/<?= $id ?>'>X</a></td>
+                    <td class="tdicon"><a class="btn btn-warning" href='/todo/modify/<?= $id ?>'>M</a></td>
+                    <td class="tdicon"><a class="btn btn-danger" href='/todo/delete/<?= $id ?>'>X</a></td>
                 </tr>
                 <?php
                     }
