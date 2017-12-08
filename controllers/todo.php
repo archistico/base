@@ -2,7 +2,7 @@
 
 class Todo {
     function get() {
-        $todos = TodoEntity::List();
+        $todos = TodoEntity::Lista();
         include("views/todo.php");
     }
 }
@@ -91,6 +91,54 @@ class TodoDelete {
 }
 
 /* -------------------------------------------------
+ *                      MODIFY
+ * -------------------------------------------------
+ */
+
+class TodoModify {
+    function post() {
+        $utentefk = 1;
+        $errors = [];
+
+        if (isset($_POST['id']) && strlen(trim($_POST['id'])) > 0) {
+            $id = Utilita::PULISCISTRINGA($_POST['id']);
+        } else {
+            $errors[] = 'ID non passato';
+        }
+
+        if (isset($_POST['todo']) && strlen(trim($_POST['todo'])) > 0) {
+            $todo = Utilita::PULISCISTRINGA($_POST['todo']);
+        } else {
+            $errors[] = 'Todo non passato';
+        }
+
+        if(empty($errors)) {
+
+            if(!TodoEntity::MODIFY($id, $todo)) {
+                $errors[] = 'Errore modifica base dati';
+            } else {
+                Flashmessage::ADD($utentefk, 'todo', 'ok', 'Modificato', 'SUCCESS');
+            }
+        }
+
+        if(!empty($errors)) {
+            foreach($errors as $testo) {
+                Flashmessage::ADD($utentefk, 'todo', 'Attenzione', $testo, 'ALERT');
+            }
+        }
+
+        // Rinvia alla pagina
+        header("Location: /todo");
+    }
+
+    function get($id) {
+        $todo = TodoEntity::ID($id);
+        $linkAnnulla = "/todo";
+        include("views/todomodify.php");
+    }
+}
+
+/* -------------------------------------------------
  *                      ENTITY
  * -------------------------------------------------
  */
@@ -111,7 +159,7 @@ class TodoEntity {
         return $result;
     }
 
-    public static function List() {
+    public static function Lista() {
         try {
 
             $query = MySQL::getInstance()->query("SELECT id, descrizione FROM todo ORDER BY id ASC");
@@ -151,6 +199,22 @@ class TodoEntity {
             throw new PDOException("Error  : " . $e->getMessage());
         }
         
+        return $result;
+    }
+
+    public static function MODIFY($id,$todo) {
+        $result = false;
+        try {
+
+            $query = MySQL::getInstance()->prepare("UPDATE todo SET descrizione = :descrizione WHERE id = :id");
+            $query->bindValue(':id', $id, PDO::PARAM_STR);
+            $query->bindValue(':descrizione', $todo, PDO::PARAM_STR);
+            $result = $query->execute();
+
+        }  catch (PDOException $e) {
+            throw new PDOException("Error  : " . $e->getMessage());
+        }
+
         return $result;
     }
 }

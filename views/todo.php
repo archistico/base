@@ -49,7 +49,7 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
                 foreach($todos as $todo) {
                     $id = $todo['id'];
                     $descrizione = $todo['descrizione'];
-                    echo "$id : $descrizione | <a href='/todo/delete/$id'>X</a>".BR;
+                    echo "$id : $descrizione | <a href='/todo/modify/$id'>M</a> | <a href='/todo/delete/$id'>X</a>".BR;
                 }
             ?>
         </div>

@@ -18,5 +18,6 @@ Route::serve(array(
     "/todo" => "Todo",
     "/todoadd" => "Todoadd",
     "/todo/delete/:number" => "TodoDelete",
+    "/todo/modify/:number" => "TodoModify",
 
 ));

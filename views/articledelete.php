@@ -17,7 +17,7 @@ Html_default::JUMBOTRON("Studio Archistico", "Base");
  *       CORPO FILE
  * -----------------------------
  */
-echo "CANCELLA".BR;
+echo "CANCELLA!".BR;
 echo $slug.BR;
 
 /* -----------------------------

@@ -2,110 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5bf18c9-e98d-4898-9404-e58402bdb26e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/.idea/base.iml" afterPath="$PROJECT_DIR$/.idea/base.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/todomodify.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/controllers/article.php" afterPath="$PROJECT_DIR$/controllers/article.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/dashboard.php" afterPath="$PROJECT_DIR$/controllers/dashboard.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/receive.php" afterPath="$PROJECT_DIR$/controllers/receive.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/saluta.php" afterPath="$PROJECT_DIR$/controllers/saluta.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/send.php" afterPath="$PROJECT_DIR$/controllers/send.php" />
-      <change beforePath="$PROJECT_DIR$/controllers/stats.php" afterPath="$PROJECT_DIR$/controllers/stats.php" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
-      <change beforePath="$PROJECT_DIR$/css/stile.css" afterPath="$PROJECT_DIR$/css/stile.css" />
+      <change beforePath="$PROJECT_DIR$/controllers/todo.php" afterPath="$PROJECT_DIR$/controllers/todo.php" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/lib/file.php" afterPath="$PROJECT_DIR$/lib/file.php" />
-      <change beforePath="$PROJECT_DIR$/lib/flashmessage.php" afterPath="$PROJECT_DIR$/lib/flashmessage.php" />
-      <change beforePath="$PROJECT_DIR$/lib/mysql.php" afterPath="$PROJECT_DIR$/lib/mysql.php" />
-      <change beforePath="$PROJECT_DIR$/lib/queries.php" afterPath="$PROJECT_DIR$/lib/queries.php" />
-      <change beforePath="$PROJECT_DIR$/lib/route.php" afterPath="$PROJECT_DIR$/lib/route.php" />
-      <change beforePath="$PROJECT_DIR$/lib/utilita.php" afterPath="$PROJECT_DIR$/lib/utilita.php" />
-      <change beforePath="$PROJECT_DIR$/loader.php" afterPath="$PROJECT_DIR$/loader.php" />
-      <change beforePath="$PROJECT_DIR$/routequeue.sql" afterPath="$PROJECT_DIR$/routequeue.sql" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/vendor/awesome/css/font-awesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/vendor/awesome/fonts/FontAwesome.otf" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.eot" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.woff" />
-      <change beforePath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/vendor/awesome/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker.it.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker.it.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker3.css" afterPath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker3.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker3.css.map" afterPath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker3.css.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker3.min.css" afterPath="$PROJECT_DIR$/vendor/bootstrap-datepicker/bootstrap-datepicker3.min.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datepicker/link" afterPath="$PROJECT_DIR$/vendor/bootstrap-datepicker/link" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.css.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.js.map" afterPath="$PROJECT_DIR$/vendor/bootstrap/bootstrap.min.js.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/chartjs/chart.bundle.min.js" afterPath="$PROJECT_DIR$/vendor/chartjs/chart.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.css" afterPath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.js" afterPath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.min.css" afterPath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.min.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/vendor/datatables/jquery.dataTables.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/fittext/jquery.fittext.js" afterPath="$PROJECT_DIR$/vendor/fittext/jquery.fittext.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courier.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/courier.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courierb.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/courierb.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courierbi.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/courierbi.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courieri.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/courieri.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helvetica.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/helvetica.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helveticab.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/helveticab.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helveticabi.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/helveticabi.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helveticai.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/helveticai.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/symbol.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/symbol.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/times.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/times.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/timesb.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/timesb.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/timesbi.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/timesbi.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/timesi.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/timesi.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/zapfdingbats.php" afterPath="$PROJECT_DIR$/vendor/fpdf/font/zapfdingbats.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/fpdf.css" afterPath="$PROJECT_DIR$/vendor/fpdf/fpdf.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/fpdf.php" afterPath="$PROJECT_DIR$/vendor/fpdf/fpdf.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1250.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1250.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1251.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1251.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1252.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1252.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1253.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1253.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1254.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1254.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1255.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1255.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1257.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1257.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1258.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1258.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp874.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/cp874.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-1.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-1.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-11.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-11.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-15.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-15.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-16.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-16.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-2.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-2.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-4.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-4.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-5.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-5.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-7.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-7.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-9.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-9.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/koi8-r.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/koi8-r.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/koi8-u.map" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/koi8-u.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/makefont.php" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/makefont.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/ttfparser.php" afterPath="$PROJECT_DIR$/vendor/fpdf/makefont/ttfparser.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/jquery/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/vendor/jquery/jquery-3.2.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/moment/moment-with-locales.min.js" afterPath="$PROJECT_DIR$/vendor/moment/moment-with-locales.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/moment/moment.min.js" afterPath="$PROJECT_DIR$/vendor/moment/moment.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/palette/link" afterPath="$PROJECT_DIR$/vendor/palette/link" />
-      <change beforePath="$PROJECT_DIR$/vendor/palette/palette.js" afterPath="$PROJECT_DIR$/vendor/palette/palette.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/popper/popper.min.js" afterPath="$PROJECT_DIR$/vendor/popper/popper.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/popper/popper.min.js.map" afterPath="$PROJECT_DIR$/vendor/popper/popper.min.js.map" />
-      <change beforePath="$PROJECT_DIR$/vendor/select2/info.txt" afterPath="$PROJECT_DIR$/vendor/select2/info.txt" />
-      <change beforePath="$PROJECT_DIR$/vendor/select2/select2.min.css" afterPath="$PROJECT_DIR$/vendor/select2/select2.min.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/select2/select2.min.js" afterPath="$PROJECT_DIR$/vendor/select2/select2.min.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/sha512/form.js" afterPath="$PROJECT_DIR$/vendor/sha512/form.js" />
-      <change beforePath="$PROJECT_DIR$/vendor/sha512/sha512.js" afterPath="$PROJECT_DIR$/vendor/sha512/sha512.js" />
-      <change beforePath="$PROJECT_DIR$/views/article.php" afterPath="$PROJECT_DIR$/views/article.php" />
-      <change beforePath="$PROJECT_DIR$/views/dashboard.php" afterPath="$PROJECT_DIR$/views/dashboard.php" />
-      <change beforePath="$PROJECT_DIR$/views/html_default.php" afterPath="$PROJECT_DIR$/views/html_default.php" />
-      <change beforePath="$PROJECT_DIR$/views/saluta.php" afterPath="$PROJECT_DIR$/views/saluta.php" />
+      <change beforePath="$PROJECT_DIR$/views/articledelete.php" afterPath="$PROJECT_DIR$/views/articledelete.php" />
+      <change beforePath="$PROJECT_DIR$/views/todo.php" afterPath="$PROJECT_DIR$/views/todo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,33 +17,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="todo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/todo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/article.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articledelete.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/articledelete.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="769">
+              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+              <folding>
+                <marker date="1512743894489" expanded="true" signature="3923:3975" ph="INSERT INTO todo... " />
+                <marker date="1512743894489" expanded="true" signature="4348:4396" ph="SELECT id, d... todo" />
+                <marker date="1512743894489" expanded="true" signature="4692:4739" ph="SELECT id, d... todo" />
+                <marker date="1512743894489" expanded="true" signature="5165:5196" ph="DELETE FROM todo... " />
+                <marker date="1512743894489" expanded="true" signature="5595:5637" ph="UPDATE todo... " />
+                <marker date="1512743894489" expanded="true" signature="5595:5652" ph="UPDATE todo... " />
+                <marker date="1512743894489" expanded="true" signature="5601:5637" ph="INSERT INTO todo... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,9 +62,12 @@
         <option value="$PROJECT_DIR$/views/saluta.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/views/html_default.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controllers/article.php" />
         <option value="$PROJECT_DIR$/views/articledelete.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/views/todomodify.php" />
+        <option value="$PROJECT_DIR$/views/todo.php" />
+        <option value="$PROJECT_DIR$/controllers/todo.php" />
       </list>
     </option>
   </component>
@@ -206,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,11 +122,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -266,28 +160,29 @@
       <updated>1512564946302</updated>
       <workItem from="1512564947896" duration="5759000" />
       <workItem from="1512573630505" duration="3520000" />
+      <workItem from="1512743007839" duration="888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9279000" />
+    <option name="totallyTimeSpent" value="10167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -308,6 +203,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/articledelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/mysql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -321,7 +240,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="620">
             <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -371,9 +289,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#2474#2567#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -413,52 +329,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <marker date="1512576380343" expanded="true" signature="152:749" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="167:749" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="1086:1095" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="1246:1255" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="1944:2391" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="2196:2276" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="2342:2391" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="2382:2391" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="4780:4903" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="4797:4865" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5077:5202" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5094:5164" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5399:5514" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5435:5495" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5468:5489" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5476:5489" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5622:5777" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5658:5758" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5731:5752" ph="..." />
-            <marker date="1512576380343" expanded="true" signature="5739:5752" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/articledelete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="342">
+          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tododelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/todo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/todo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding>
+            <marker date="1512743894489" expanded="true" signature="3923:3975" ph="INSERT INTO todo... " />
+            <marker date="1512743894489" expanded="true" signature="4348:4396" ph="SELECT id, d... todo" />
+            <marker date="1512743894489" expanded="true" signature="4692:4739" ph="SELECT id, d... todo" />
+            <marker date="1512743894489" expanded="true" signature="5165:5196" ph="DELETE FROM todo... " />
+            <marker date="1512743894489" expanded="true" signature="5595:5637" ph="UPDATE todo... " />
+            <marker date="1512743894489" expanded="true" signature="5595:5652" ph="UPDATE todo... " />
+            <marker date="1512743894489" expanded="true" signature="5601:5637" ph="INSERT INTO todo... " />
+          </folding>
         </state>
       </provider>
     </entry>
