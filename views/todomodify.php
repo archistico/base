@@ -40,7 +40,7 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
         <div class='row paddingTop20'>
             <div class='col-md-12'>
                 <input type="hidden" name="id" value="<?= $todo['id'] ?>"/>
-                <textarea class="form-control" name="todo"><?= $todo['descrizione'] ?></textarea><br/>
+                <input type="text" class="form-control" name="todo" value="<?= $todo['descrizione'] ?>" /><br/>
             </div>
         </div>
 

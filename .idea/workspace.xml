@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5bf18c9-e98d-4898-9404-e58402bdb26e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/todomodify.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controllers/todo.php" afterPath="$PROJECT_DIR$/controllers/todo.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/views/articledelete.php" afterPath="$PROJECT_DIR$/views/articledelete.php" />
+      <change beforePath="$PROJECT_DIR$/css/stile.css" afterPath="$PROJECT_DIR$/css/stile.css" />
       <change beforePath="$PROJECT_DIR$/views/todo.php" afterPath="$PROJECT_DIR$/views/todo.php" />
+      <change beforePath="$PROJECT_DIR$/views/todomodify.php" afterPath="$PROJECT_DIR$/views/todomodify.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,26 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="todo.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/todo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="769">
-              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-              <folding>
-                <marker date="1512743894489" expanded="true" signature="3923:3975" ph="INSERT INTO todo... " />
-                <marker date="1512743894489" expanded="true" signature="4348:4396" ph="SELECT id, d... todo" />
-                <marker date="1512743894489" expanded="true" signature="4692:4739" ph="SELECT id, d... todo" />
-                <marker date="1512743894489" expanded="true" signature="5165:5196" ph="DELETE FROM todo... " />
-                <marker date="1512743894489" expanded="true" signature="5595:5637" ph="UPDATE todo... " />
-                <marker date="1512743894489" expanded="true" signature="5595:5652" ph="UPDATE todo... " />
-                <marker date="1512743894489" expanded="true" signature="5601:5637" ph="INSERT INTO todo... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -65,9 +43,10 @@
         <option value="$PROJECT_DIR$/controllers/article.php" />
         <option value="$PROJECT_DIR$/views/articledelete.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controllers/todo.php" />
+        <option value="$PROJECT_DIR$/css/stile.css" />
         <option value="$PROJECT_DIR$/views/todomodify.php" />
         <option value="$PROJECT_DIR$/views/todo.php" />
-        <option value="$PROJECT_DIR$/controllers/todo.php" />
       </list>
     </option>
   </component>
@@ -160,19 +139,18 @@
       <updated>1512564946302</updated>
       <workItem from="1512564947896" duration="5759000" />
       <workItem from="1512573630505" duration="3520000" />
-      <workItem from="1512743007839" duration="888000" />
+      <workItem from="1512743007839" duration="2301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10167000" />
+    <option name="totallyTimeSpent" value="11580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -365,22 +343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/todo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/todo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="769">
@@ -394,6 +356,30 @@
             <marker date="1512743894489" expanded="true" signature="5595:5652" ph="UPDATE todo... " />
             <marker date="1512743894489" expanded="true" signature="5601:5637" ph="INSERT INTO todo... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/stile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="42" column="105" lean-forward="false" selection-start-line="42" selection-start-column="105" selection-end-line="42" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/todo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="38" column="93" lean-forward="false" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>

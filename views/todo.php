@@ -29,15 +29,15 @@ Html_default::JUMBOTRON("Studio Archistico", "Todo");
  */
 Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
 
-?> 
+?>
     <div class='row'>
         <div class='col-md-12'>
             <h1>New todo</h1>
             <form action="./todoadd" method="post">
                 <div class='form-group'>
-                    <textarea class="form-control" name="todo"></textarea><br/>
-                    <input type="submit" value="Send" class='btn btn-block btn-lg'/>
-                <div>
+                    <input type="text" class="form-control" name="todo"></input><br/>
+                    <input type="submit" value="Send" class='btn btn-block btn-lg btn-success'/>
+                    <div>
             </form>
         </div>
     </div>
@@ -45,16 +45,36 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
     <div class='row'>
         <div class='col-md-12'>
             <h1>List todo</h1>
-            <?php
+            <table id='tabella' class='table table-bordered table-hover'>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Todo</th>
+                    <th>Mod.</th>
+                    <th>Canc.</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <?php
                 foreach($todos as $todo) {
                     $id = $todo['id'];
                     $descrizione = $todo['descrizione'];
-                    echo "$id : $descrizione | <a href='/todo/modify/$id'>M</a> | <a href='/todo/delete/$id'>X</a>".BR;
-                }
-            ?>
+                ?>
+                <tr>
+                    <td><?= $id ?></td>
+                    <td><?= $descrizione ?></td>
+                    <td class="tdicon"><a class="btn-lg btn-warning" href='/todo/modify/<?= $id ?>'>M</a></td>
+                    <td class="tdicon"><a class="btn-lg btn-danger" href='/todo/delete/<?= $id ?>'>X</a></td>
+                </tr>
+                <?php
+                    }
+                ?>
+
+                </tbody>
+            </table>
         </div>
     </div>
-
 <?php
 /* -----------------------------
  *      FINE CORPO FILE
