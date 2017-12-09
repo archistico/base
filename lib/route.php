@@ -10,7 +10,7 @@ class Route
 
     public function __construct($url, $controller, $authorization, $name, $menu)
     {
-        $this->url = $url;
+        $this->url = GLOBAL_ROUTE.$url;
         $this->controller = $controller;
         $this->authorization = $authorization;
         $this->name = $name;

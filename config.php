@@ -1,5 +1,7 @@
 <?php
 
+define('GLOBAL_ROUTE', "/base");
+
 define('GLOBAL_COOKIENAME', "Base");
 
 define('GLOBAL_DB_HOST', "localhost");
