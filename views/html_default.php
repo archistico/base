@@ -62,7 +62,9 @@ class Html_default {
 
         $menu = [
             'Home' => '/',
-            'Todo' => '/todo'
+            'Todo' => '/todo',
+            'Login' => '/login',
+            'Logout' => '/logout',
         ];
 
         $linkHome = current($menu);
@@ -124,22 +126,22 @@ class Html_default {
         }
         if($datepicker){
             $html = "
-            <script src='vendor/bootstrap-datepicker/bootstrap-datepicker.min.js'></script>
-            <script src='vendor/bootstrap-datepicker/bootstrap-datepicker.it.min.js'></script>
+            <script src='../../vendor/bootstrap-datepicker/bootstrap-datepicker.min.js'></script>
+            <script src='../../vendor/bootstrap-datepicker/bootstrap-datepicker.it.min.js'></script>
             ";
             echo $html;
         }
         if($chartjs){
             $html = "
-            <script src='vendor/palette/palette.js'></script>
-            <script src='vendor/chartjs/chart.bundle.min.js'></script>
+            <script src='../../vendor/palette/palette.js'></script>
+            <script src='../../vendor/chartjs/chart.bundle.min.js'></script>
             ";
             echo $html;
         }
         if($sha512){
             $html = "
-            <script src='vendor/sha512/sha512.js'></script>
-            <script src='vendor/sha512/form.js'></script>
+            <script src='../../vendor/sha512/sha512.js'></script>
+            <script src='../../vendor/sha512/form.js'></script>
             ";
             echo $html;
         }

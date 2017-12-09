@@ -8,6 +8,8 @@ Utilita::PARAMETRI_INIZIALI();
 
 require("controllers/home.php");
 require("controllers/todo.php");
+require("controllers/login.php");
+require("controllers/logout.php");
 
 require("lib/mysql.php");
 require("lib/route.php");
