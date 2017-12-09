@@ -5,11 +5,11 @@ class Autaut {
             // SE E' AUTENTICATO
             if(!self::AUTORIZZATO($admitted_role)) {
                 // SE NO E' AUTORIZZATO
-                Utilita::REDIRECT("error.php");
+                Utilita::REDIRECT("/notauthorized");
             }
         } else {
             // SE NON E' AUTENTICATO
-            Utilita::REDIRECT("login.php");
+            Utilita::REDIRECT("/login");
         }
     }
     public static function AUTENTICATO() {
@@ -17,6 +17,10 @@ class Autaut {
         // Controllo che l'ip sia lo stesso
         // Guardo se è più vecchia di un giorno
         // restituisco true se c'è false se non c'è
+        if(!isset($_COOKIE[GLOBAL_COOKIENAME])) {
+            return false;
+        }
+
         if(Accesso::EXIST($_COOKIE[GLOBAL_COOKIENAME], Utilita::GET_CLIENT_IP())) {
             return true;
         } else {
@@ -25,7 +29,7 @@ class Autaut {
     }
     public static function AUTORIZZATO($admitted_role) {
         // $admitted_role is array
-        $utenteruolo = Accesso::RUOLO($_COOKIE[GLOBAL_COOKIENAME], Utilita::GET_CLIENT_IP());
+        $utenteruolo = Accesso::TIPOLOGIA($_COOKIE[GLOBAL_COOKIENAME], Utilita::GET_CLIENT_IP());
         if(in_array($utenteruolo, $admitted_role)) {
             return true;
         } else {
@@ -36,8 +40,8 @@ class Autaut {
         // Ritorna il utentefk in base al cookiename
         return Accesso::UTENTEFK($_COOKIE[GLOBAL_COOKIENAME], Utilita::GET_CLIENT_IP());
     }
-    public static function LOGGATO_RUOLO() {
+    public static function LOGGATO_TIPOLOGIA() {
         // Ritorna il ruolo in base al cookiename
-        return Accesso::RUOLO($_COOKIE[GLOBAL_COOKIENAME], Utilita::GET_CLIENT_IP());
+        return Accesso::TIPOLOGIA($_COOKIE[GLOBAL_COOKIENAME], Utilita::GET_CLIENT_IP());
     }
 }

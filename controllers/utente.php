@@ -2,12 +2,42 @@
 
 class Utente {
     function get() {
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $utenti = UtenteEntity::Lista();
         include("views/utente.php");
     }
 
     function post() {
-        $utentefk = 1;
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $errors = [];
 
         // Validazione generale
@@ -104,7 +134,22 @@ class Utente {
 
 class UtenteDelete {
     function post() {
-        $utentefk = 1;
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $errors = [];
 
         if (isset($_POST['id']) && strlen(trim($_POST['id'])) > 0) {
@@ -133,6 +178,22 @@ class UtenteDelete {
     }
 
     function get($id) {
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $el = UtenteEntity::ID($id);
 
         $messaggio = "Attenzione";
@@ -150,7 +211,22 @@ class UtenteDelete {
 
 class UtenteModify {
     function post() {
-        $utentefk = 1;
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $errors = [];
 
         // Validazione generale
@@ -244,6 +320,22 @@ class UtenteModify {
     }
 
     function get($id) {
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $utente = UtenteEntity::ID($id);
         $linkAnnulla = "/utente";
         include("views/utentemodify.php");
@@ -377,13 +469,10 @@ class UtenteEntity {
         return $check;
     }
 
-    public static function FIND_BY_EMAIL_PASSWORD($email, $password) {
+    public static function FIND_BY_EMAIL($email) {
         try {
-            $password=hash('sha512', $password);
-
-            $query = MySQL::getInstance()->prepare("SELECT password FROM utente WHERE email = :email AND password = :password");
+            $query = MySQL::getInstance()->prepare("SELECT *FROM utente WHERE email = :email");
             $query->bindValue(':email', $email, PDO::PARAM_STR);
-            $query->bindValue(':password', $password, PDO::PARAM_STR);
             $query->execute();
             $ut = $query->fetch(PDO::FETCH_ASSOC);
 

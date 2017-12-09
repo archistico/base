@@ -12,6 +12,7 @@ RouteHook::add("404", function() {
 Route::serve(array(
 
     "/" => "Home",
+    "/notauthorized" => "NotAuthorized",
     "/todo" => "Todo",
     "/todoadd" => "TodoAdd",
     "/todo/delete/:number" => "TodoDelete",

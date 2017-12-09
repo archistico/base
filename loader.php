@@ -13,7 +13,7 @@ require("controllers/todo.php");
 require("controllers/utente.php");
 require("controllers/login.php");
 require("controllers/logout.php");
-
+require("controllers/notauthorized.php");
 
 require("lib/mysql.php");
 require("lib/route.php");

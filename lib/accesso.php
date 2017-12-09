@@ -35,22 +35,19 @@ class Accesso {
         $result = false;
 
         try {
-            $database = new db();
-            $database->query('INSERT INTO accesso (cookiename, utentefk, utentetipologia, data, ip, errore) VALUES(:cookiename, :utentefk, :utentetipologia, :data, :ip, :errore)');
-            $database->bind(':cookiename', $this->cookiename);
-            $database->bind(':utentefk', $this->utentefk);
-            $database->bind(':utentetipologia', Utilita::HTML2DB($this->utentetipologia));
-            $database->bind(':data', $this->getData2DB());
-            $database->bind(':ip', Utilita::HTML2DB($this->ip));
-            $database->bind(':errore', Utilita::HTML2DB($this->errore));
 
-            $result = $database->execute();
+            $query = MySQL::getInstance()->prepare("INSERT INTO accesso (cookiename, utentefk, utentetipologia, data, ip, errore) VALUES(:cookiename, :utentefk, :utentetipologia, :data, :ip, :errore)");
+            $query->bindValue(':cookiename', $this->cookiename, PDO::PARAM_STR);
+            $query->bindValue(':utentefk', $this->utentefk, PDO::PARAM_STR);
+            $query->bindValue(':utentetipologia', Utilita::HTML2DB($this->utentetipologia), PDO::PARAM_STR);
+            $query->bindValue(':data', $this->getData2DB(), PDO::PARAM_STR);
+            $query->bindValue(':ip', Utilita::HTML2DB($this->ip), PDO::PARAM_STR);
+            $query->bindValue(':errore', Utilita::HTML2DB($this->errore), PDO::PARAM_STR);
+            $result = $query->execute();
+
         } catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
         }
-
-        // chiude il database
-        $database = NULL;
 
         return $result;
     }
@@ -69,21 +66,19 @@ class Accesso {
             $oggi = new DateTime();
             $ieri = $oggi->sub( new DateInterval('P1D') )->format('Y-m-d H:i:s');
 
-            $database = new db();
-            $database->query('SELECT * FROM accesso WHERE cookiename = :cookiename AND ip=:ip AND data >:ieri');
-            $database->bind(':cookiename', $cookiename);
-            $database->bind(':ip', $ip);
-            $database->bind(':ieri', $ieri);
-            $database->execute();
-            if($database->rowCount()>0) {
+            $query = MySQL::getInstance()->prepare("SELECT * FROM accesso WHERE cookiename = :cookiename AND ip=:ip AND data >:ieri");
+            $query->bindValue(':cookiename', $cookiename, PDO::PARAM_STR);
+            $query->bindValue(':ip', $ip, PDO::PARAM_STR);
+            $query->bindValue(':ieri', $ieri, PDO::PARAM_STR);
+            $query->execute();
+            $result = $query->fetchAll();
+
+            if(count($result)>0) {
                 $exist = true;
             }
         } catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
         }
-
-        // chiude il database
-        $database = NULL;
 
         return $exist;
     }
@@ -94,14 +89,14 @@ class Accesso {
             $oggi = new DateTime();
             $ieri = $oggi->sub( new DateInterval('P1D') )->format('Y-m-d H:i:s');
 
-            $database = new db();
-            $database->query('SELECT * FROM accesso WHERE cookiename = :cookiename AND ip=:ip AND data >:ieri');
-            $database->bind(':cookiename', $cookiename);
-            $database->bind(':ip', $ip);
-            $database->bind(':ieri', $ieri);
-            $row = $database->single();
+            $query = MySQL::getInstance()->prepare("SELECT * FROM accesso WHERE cookiename = :cookiename AND ip=:ip AND data >:ieri");
+            $query->bindValue(':cookiename', $cookiename, PDO::PARAM_STR);
+            $query->bindValue(':ip', $ip, PDO::PARAM_STR);
+            $query->bindValue(':ieri', $ieri, PDO::PARAM_STR);
+            $query->execute();
+            $result = $query->fetchAll();
 
-            return Utilita::DB2HTML($row['utentetipologia']);
+            return Utilita::DB2HTML($result[0]['utentetipologia']);
 
         } catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
@@ -114,67 +109,18 @@ class Accesso {
             $oggi = new DateTime();
             $ieri = $oggi->sub( new DateInterval('P1D') )->format('Y-m-d H:i:s');
 
-            $database = new db();
-            $database->query('SELECT * FROM accesso WHERE cookiename = :cookiename AND ip=:ip AND data >:ieri');
-            $database->bind(':cookiename', $cookiename);
-            $database->bind(':ip', $ip);
-            $database->bind(':ieri', $ieri);
-            $row = $database->single();
+            $query = MySQL::getInstance()->prepare("SELECT * FROM accesso WHERE cookiename = :cookiename AND ip=:ip AND data >:ieri");
+            $query->bindValue(':cookiename', $cookiename, PDO::PARAM_STR);
+            $query->bindValue(':ip', $ip, PDO::PARAM_STR);
+            $query->bindValue(':ieri', $ieri, PDO::PARAM_STR);
+            $query->execute();
+            $result = $query->fetchAll();
 
-            return Utilita::DB2HTML($row['utentefk']);
-
-        } catch (PDOException $e) {
-            throw new PDOException("Error  : " . $e->getMessage());
-        }
-    }
-
-}
-
-/* --------------------------------------
- *           CLASS ACCESSI
- * --------------------------------------
- */
-
-class Accessi
-{
-    public $accessi;
-
-    public function __construct()
-    {
-        $this->accessi = [];
-    }
-
-    public function Add($obj)
-    {
-        $this->accessi[] = $obj;
-    }
-
-    public function getAccessi()
-    {
-        return $this->accessi;
-    }
-
-    public function loadAll()
-    {
-        try {
-            $database = new db();
-            $database->query('SELECT * FROM accesso');
-            $rows = $database->resultset();
-
-            foreach ($rows as $row) {
-                $t = new Accesso();
-                /*
-                $t->fatturaid = $row['fatturaid'];
-                $t->setDataDB($row['data']);
-                $t->progettofk = $row['progettofk'];
-                $t->progetto = Progetto::DB_FIND_BY_ID($row['progettofk']);
-                $t->oggetto = Utilita::DB2HTML($row['oggetto']);
-                */
-                $this->Add($t);
-            }
+            return Utilita::DB2HTML($result[0]['utentefk']);
 
         } catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
         }
     }
+
 }

@@ -2,6 +2,21 @@
 
 class Todo {
     function get() {
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $todos = TodoEntity::Lista();
         include("views/todo.php");
     }
@@ -14,7 +29,21 @@ class Todo {
 
 class TodoAdd {
     function post() {
-        $utentefk = 1;
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $errors = [];
 
         if (isset($_POST['todo']) && strlen(trim($_POST['todo'])) > 0) {
@@ -50,7 +79,21 @@ class TodoAdd {
 
 class TodoDelete {
     function post() {
-        $utentefk = 1;
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $errors = [];
 
         if (isset($_POST['id']) && strlen(trim($_POST['id'])) > 0) {
@@ -79,6 +122,23 @@ class TodoDelete {
     }
 
     function get($id) {
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
+
         $todo = TodoEntity::ID($id);
 
         $messaggio = "Attenzione";
@@ -96,7 +156,21 @@ class TodoDelete {
 
 class TodoModify {
     function post() {
-        $utentefk = 1;
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $errors = [];
 
         if (isset($_POST['id']) && strlen(trim($_POST['id'])) > 0) {
@@ -131,6 +205,22 @@ class TodoModify {
     }
 
     function get($id) {
+
+        /* ----------------------------------------
+         *      AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
+        $utentefk = Autaut::LOGGATO();
+
+        $filename_corrente = File::FILENAME(__FILE__);
+        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+
+        /* ----------------------------------------
+         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
+         * ----------------------------------------
+        */
+
         $todo = TodoEntity::ID($id);
         $linkAnnulla = "/todo";
         include("views/todomodify.php");

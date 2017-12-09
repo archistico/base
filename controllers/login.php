@@ -3,6 +3,7 @@
 class Login {
     function get() {
         // Creo il formid per questa sessione
+        $filename_corrente = File::FILENAME(__FILE__);
         $csrfname = "login:csrf";
         $_SESSION[$csrfname] = md5(rand(0,10000000));
 
@@ -31,7 +32,7 @@ class Login {
             // CONTROLLA SU DB SE: EMAIL E PASSWORD CORRISPONDONO
             if(empty($errors)) {
                 if(UtenteEntity::Check_email_password($email, $password)) {
-                    $utente = UtenteEntity::FIND_BY_EMAIL_PASSWORD($email, $password);
+                    $utente = UtenteEntity::FIND_BY_EMAIL($email);
                     if(isset($_COOKIE[GLOBAL_COOKIENAME])) {
                         unset($_COOKIE[GLOBAL_COOKIENAME]);
                         setcookie(GLOBAL_COOKIENAME, null, -1, '/');

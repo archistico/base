@@ -1,18 +1,6 @@
 <?php
 require("html_default.php");
 
-$filename_corrente = File::FILENAME(__FILE__);
-
-/* -----------------------------
- *           LOGGIN
- * -----------------------------
- */
-// Autaut::CHECK_CREDENTIAL(['Amministrazione','Lavoratore','Cliente']);
-// POSSO ACCEDERE ALLA RISORSA
-// $utentefk = Autaut::LOGGATO();
-$utentefk = 1;
-$csrfname = $filename_corrente.":".$utentefk.":csrf";
-
 /* -----------------------------
  *           HTML
  * -----------------------------
