@@ -93,8 +93,8 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
                     </div>
                     <div class='col-md-6'>
                         <div class='form-group'>
-                            <label for='ruolofk'>Ruolo</label>
-                            <select class='form-control' name='ruolofk' required>
+                            <label for='tipologia'>Tipologia</label>
+                            <select class='form-control' name='tipologia' required>
                                 <option value='Visitatore'>Visitatore</option>
                                 <option value='Normale'>Normale</option>
                                 <option value='Amministratore'>Amministratore</option>
@@ -121,8 +121,8 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
                     <th>Denominazione</th>
                     <th class='d-none d-md-table-cell'>Email</th>
                     <th class='d-none d-md-table-cell'>Tipologia</th>
-                    <th class="tdicon">M</th>
-                    <th class="tdicon">X</th>
+                    <th class="tdicon"> </th>
+                    <th class="tdicon"> </th>
                 </tr>
                 </thead>
                 <tbody>

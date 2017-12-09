@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5bf18c9-e98d-4898-9404-e58402bdb26e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/emilie.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" afterPath="$PROJECT_DIR$/views/home.php" />
-      <change beforePath="$PROJECT_DIR$/views/html_default.php" afterPath="$PROJECT_DIR$/views/html_default.php" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" afterPath="$PROJECT_DIR$/views/login.php" />
-      <change beforePath="$PROJECT_DIR$/views/todo.php" afterPath="$PROJECT_DIR$/views/todo.php" />
-      <change beforePath="$PROJECT_DIR$/views/tododelete.php" afterPath="$PROJECT_DIR$/views/tododelete.php" />
-      <change beforePath="$PROJECT_DIR$/views/todomodify.php" afterPath="$PROJECT_DIR$/views/todomodify.php" />
+      <change beforePath="$PROJECT_DIR$/controllers/utente.php" afterPath="$PROJECT_DIR$/controllers/utente.php" />
+      <change beforePath="$PROJECT_DIR$/lib/utilita.php" afterPath="$PROJECT_DIR$/lib/utilita.php" />
       <change beforePath="$PROJECT_DIR$/views/utente.php" afterPath="$PROJECT_DIR$/views/utente.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +17,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="utente.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/utente.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="204" column="175" lean-forward="false" selection-start-line="204" selection-start-column="175" selection-end-line="204" selection-end-column="175" />
+              <folding>
+                <marker date="1512830911012" expanded="true" signature="6046:6170" ph="INSERT INTO todo... " />
+                <marker date="1512830911012" expanded="true" signature="7252:7299" ph="SELECT id, d... todo" />
+                <marker date="1512830911012" expanded="true" signature="7595:7642" ph="SELECT id, d... todo" />
+                <marker date="1512830911012" expanded="true" signature="8068:8099" ph="DELETE FROM todo... " />
+                <marker date="1512830911012" expanded="true" signature="8490:8547" ph="UPDATE todo... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -58,14 +73,15 @@
         <option value="$PROJECT_DIR$/loader.php" />
         <option value="$PROJECT_DIR$/sql/utente.sql" />
         <option value="$PROJECT_DIR$/sql/utente_fake.sql" />
-        <option value="$PROJECT_DIR$/controllers/utente.php" />
         <option value="$PROJECT_DIR$/views/html_default.php" />
-        <option value="$PROJECT_DIR$/views/utente.php" />
         <option value="$PROJECT_DIR$/views/home.php" />
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="$PROJECT_DIR$/views/todo.php" />
         <option value="$PROJECT_DIR$/views/tododelete.php" />
         <option value="$PROJECT_DIR$/views/todomodify.php" />
+        <option value="$PROJECT_DIR$/views/utente.php" />
+        <option value="$PROJECT_DIR$/lib/utilita.php" />
+        <option value="$PROJECT_DIR$/controllers/utente.php" />
       </list>
     </option>
   </component>
@@ -81,6 +97,25 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpellCheckingInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -130,6 +165,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -165,18 +201,19 @@
       <workItem from="1512573630505" duration="3520000" />
       <workItem from="1512743007839" duration="3694000" />
       <workItem from="1512753154597" duration="462000" />
-      <workItem from="1512813961814" duration="7468000" />
+      <workItem from="1512813961814" duration="10519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20903000" />
+    <option name="totallyTimeSpent" value="23954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -252,13 +289,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/send.php" />
-    <entry file="file://$PROJECT_DIR$/lib/utilita.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/dashboard.php" />
     <entry file="file://$PROJECT_DIR$/views/article.php" />
     <entry file="file://$PROJECT_DIR$/views/saluta.php" />
@@ -319,20 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/todo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
-          <folding>
-            <marker date="1512817773631" expanded="true" signature="3942:3994" ph="INSERT INTO todo... " />
-            <marker date="1512817773631" expanded="true" signature="4385:4433" ph="SELECT id, d... todo" />
-            <marker date="1512817773631" expanded="true" signature="4729:4776" ph="SELECT id, d... todo" />
-            <marker date="1512817773631" expanded="true" signature="5202:5233" ph="DELETE FROM todo... " />
-            <marker date="1512817773631" expanded="true" signature="5632:5689" ph="UPDATE todo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -354,20 +370,6 @@
         <state relative-caret-position="72">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/utente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="164" column="93" lean-forward="false" selection-start-line="164" selection-start-column="93" selection-end-line="164" selection-end-column="93" />
-          <folding>
-            <marker date="1512821582156" expanded="true" signature="3933:3985" ph="INSERT INTO todo... " />
-            <marker date="1512821582156" expanded="true" signature="4368:4415" ph="SELECT id, d... todo" />
-            <marker date="1512821582156" expanded="true" signature="4711:4758" ph="SELECT id, d... todo" />
-            <marker date="1512821582156" expanded="true" signature="5184:5215" ph="DELETE FROM todo... " />
-            <marker date="1512821582156" expanded="true" signature="5606:5663" ph="UPDATE todo... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -416,14 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/todo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -448,11 +442,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/utente.php">
+    <entry file="file://$PROJECT_DIR$/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/utente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="124" column="40" lean-forward="false" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/todo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+          <folding>
+            <marker date="1512817773631" expanded="true" signature="3942:3994" ph="INSERT INTO todo... " />
+            <marker date="1512817773631" expanded="true" signature="4385:4433" ph="SELECT id, d... todo" />
+            <marker date="1512817773631" expanded="true" signature="4729:4776" ph="SELECT id, d... todo" />
+            <marker date="1512817773631" expanded="true" signature="5202:5233" ph="DELETE FROM todo... " />
+            <marker date="1512817773631" expanded="true" signature="5632:5689" ph="UPDATE todo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utilita.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/utente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="204" column="175" lean-forward="false" selection-start-line="204" selection-start-column="175" selection-end-line="204" selection-end-column="175" />
+          <folding>
+            <marker date="1512830911012" expanded="true" signature="6046:6170" ph="INSERT INTO todo... " />
+            <marker date="1512830911012" expanded="true" signature="7252:7299" ph="SELECT id, d... todo" />
+            <marker date="1512830911012" expanded="true" signature="7595:7642" ph="SELECT id, d... todo" />
+            <marker date="1512830911012" expanded="true" signature="8068:8099" ph="DELETE FROM todo... " />
+            <marker date="1512830911012" expanded="true" signature="8490:8547" ph="UPDATE todo... " />
+          </folding>
         </state>
       </provider>
     </entry>

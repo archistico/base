@@ -47,7 +47,8 @@ class Utilita {
 
     public static function PULISCISTRINGA($str){
         $str = str_replace("  ", " ", $str);
-        $str = str_replace("'", " ", $str);
+        $str = str_replace("\"", "'", $str);
+        $str = str_replace("'", "\'", $str);
         $str = str_replace("’", " ", $str);
         $str = str_replace("–", "-", $str);
         $str = str_replace("“", " ", $str);
@@ -57,7 +58,7 @@ class Utilita {
     }
 
     public static function DB2HTML($stringa) {
-        return utf8_encode($stringa);
+        return utf8_encode(stripslashes($stringa));
     }
     public static function HTML2DB($stringa) {
         return utf8_decode($stringa);
