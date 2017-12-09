@@ -22,12 +22,20 @@ RewriteRule ^(.*)$ /index.php/$1 [L]
 
 file conf in sites-availables
 ```apacheconf
-<Directory /var/www/html/base/>
-    Options Indexes FollowSymLinks MultiViews
-    AllowOverride All
-    Order allow,deny
-    allow from all
-</Directory>
+<VirtualHost *:80>
+	
+	ServerName base.local
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html/base
+	
+	<Directory /var/www/html/base>
+	    Options Indexes FollowSymLinks MultiViews
+	    AllowOverride All
+	    Order allow,deny
+	    allow from all
+	</Directory>
+</VirtualHost>
+
 ```
 
 ## Credit
