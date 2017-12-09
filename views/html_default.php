@@ -60,6 +60,7 @@ class Html_default {
     public static function MENU($file) {
         // MENU
         $file = '/'.$file;
+        $tipologia = Autaut::LOGGATO_TIPOLOGIA();
 
         $menu = [
             'Home' => '/',
