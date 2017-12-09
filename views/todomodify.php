@@ -40,7 +40,7 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
         <div class='row paddingTop20'>
             <div class='col-md-12'>
                 <input type="hidden" name="id" value="<?= $todo['id'] ?>"/>
-                <input type="text" class="form-control" name="todo" value="<?= $todo['descrizione'] ?>" /><br/>
+                <input type="text" class="form-control" name="todo" value="<?= Utilita::DB2HTML($todo['descrizione']) ?>" /><br/>
             </div>
         </div>
 

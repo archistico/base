@@ -25,10 +25,6 @@ Html_default::OPENCONTAINER();
  */
 Html_default::SHOW_NOTICES(Flashmessage::READ('guest', $filename_corrente));
 
-// Creo il formid per questa sessione
-$csrfname = $filename_corrente.":csrf";
-$_SESSION[$csrfname] = md5(rand(0,10000000));
-
 ?>
     <form class='form-signin' name='login_form' id='login_form' onsubmit='DoSubmit();' method='post'>
         <h2 class='form-signin-heading'>Login</h2>
@@ -36,7 +32,7 @@ $_SESSION[$csrfname] = md5(rand(0,10000000));
         <input type='email' id='email' name='email' class='form-control' placeholder='Email address' required autofocus>
         <label for='p' class='sr-only'>Password</label>
         <input type='password' id='password_chiaro' name='password_chiaro' class='form-control' placeholder='Password' required>
-        <input type='hidden' name='<?= htmlspecialchars($_SESSION[$csrfname]) ?>' value='<?= $csrfname ?>'>
+        <input type='hidden' name='<?= $csrfname ?>' value='<?= htmlspecialchars($_SESSION[$csrfname]) ?>'>
         <button class='btn btn-lg btn-primary btn-block' type='submit'>ENTRA</button>
     </form>
 

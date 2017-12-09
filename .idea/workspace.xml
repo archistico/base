@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5bf18c9-e98d-4898-9404-e58402bdb26e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/login.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/logout.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/login.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/loader.php" afterPath="$PROJECT_DIR$/loader.php" />
-      <change beforePath="$PROJECT_DIR$/views/html_default.php" afterPath="$PROJECT_DIR$/views/html_default.php" />
+      <change beforePath="$PROJECT_DIR$/controllers/login.php" afterPath="$PROJECT_DIR$/controllers/login.php" />
+      <change beforePath="$PROJECT_DIR$/controllers/logout.php" afterPath="$PROJECT_DIR$/controllers/logout.php" />
+      <change beforePath="$PROJECT_DIR$/controllers/todo.php" afterPath="$PROJECT_DIR$/controllers/todo.php" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" afterPath="$PROJECT_DIR$/views/login.php" />
+      <change beforePath="$PROJECT_DIR$/views/todo.php" afterPath="$PROJECT_DIR$/views/todo.php" />
+      <change beforePath="$PROJECT_DIR$/views/todomodify.php" afterPath="$PROJECT_DIR$/views/todomodify.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,96 +17,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="todo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/todo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="html_default.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/html_default.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="66" column="32" lean-forward="false" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
-              <folding>
-                <marker date="1512815103766" expanded="true" signature="152:749" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="167:749" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="1086:1095" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="1246:1255" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="1969:2416" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="2221:2301" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="2367:2416" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="2407:2416" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="4841:4964" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="4858:4926" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5138:5263" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5155:5225" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5460:5575" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5496:5556" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5529:5550" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5537:5550" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5683:5838" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5719:5819" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5792:5813" ph="..." />
-                <marker date="1512815103766" expanded="true" signature="5800:5813" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>$_SESSION</find>
+      <find>$_GET</find>
     </findStrings>
     <replaceStrings>
       <replace>$_COOKIE</replace>
+      <replace>$_POST</replace>
+      <replace>$errors</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -128,17 +48,17 @@
         <option value="$PROJECT_DIR$/controllers/article.php" />
         <option value="$PROJECT_DIR$/views/articledelete.php" />
         <option value="$PROJECT_DIR$/css/stile.css" />
-        <option value="$PROJECT_DIR$/views/todomodify.php" />
-        <option value="$PROJECT_DIR$/controllers/todo.php" />
         <option value="$PROJECT_DIR$/controllers/home.php" />
         <option value="$PROJECT_DIR$/views/home.php" />
-        <option value="$PROJECT_DIR$/views/todo.php" />
-        <option value="$PROJECT_DIR$/views/login.php" />
-        <option value="$PROJECT_DIR$/controllers/login.php" />
         <option value="$PROJECT_DIR$/loader.php" />
-        <option value="$PROJECT_DIR$/controllers/logout.php" />
         <option value="$PROJECT_DIR$/views/html_default.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controllers/logout.php" />
+        <option value="$PROJECT_DIR$/views/login.php" />
+        <option value="$PROJECT_DIR$/controllers/login.php" />
+        <option value="$PROJECT_DIR$/views/todo.php" />
+        <option value="$PROJECT_DIR$/views/todomodify.php" />
+        <option value="$PROJECT_DIR$/controllers/todo.php" />
       </list>
     </option>
   </component>
@@ -176,27 +96,6 @@
             <path>
               <item name="base" type="b2602c69:ProjectViewProjectNode" />
               <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sha512" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -244,19 +143,18 @@
       <workItem from="1512573630505" duration="3520000" />
       <workItem from="1512743007839" duration="3694000" />
       <workItem from="1512753154597" duration="462000" />
-      <workItem from="1512813961814" duration="1227000" />
+      <workItem from="1512813961814" duration="3832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14662000" />
+    <option name="totallyTimeSpent" value="17267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16028063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -360,24 +258,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/articledelete.php" />
     <entry file="file://$PROJECT_DIR$/controllers/article.php" />
-    <entry file="file://$PROJECT_DIR$/views/tododelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/stile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="42" column="105" lean-forward="false" selection-start-line="42" selection-start-column="105" selection-end-line="42" selection-end-column="105" />
         </state>
       </provider>
     </entry>
@@ -397,36 +281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/todo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="41" column="34" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="41" selection-end-column="34" />
-          <folding>
-            <marker date="1512743894489" expanded="true" signature="3923:3975" ph="INSERT INTO todo... " />
-            <marker date="1512743894489" expanded="true" signature="4348:4396" ph="SELECT id, d... todo" />
-            <marker date="1512743894489" expanded="true" signature="4692:4739" ph="SELECT id, d... todo" />
-            <marker date="1512743894489" expanded="true" signature="5165:5196" ph="DELETE FROM todo... " />
-            <marker date="1512743894489" expanded="true" signature="5595:5652" ph="UPDATE todo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/todo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -439,6 +293,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -472,27 +334,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/controllers/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="34" column="48" lean-forward="false" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/todo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="61" column="52" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="42" column="117" lean-forward="false" selection-start-line="42" selection-start-column="117" selection-end-line="42" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tododelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/todo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <folding>
+            <marker date="1512817773631" expanded="true" signature="3942:3994" ph="INSERT INTO todo... " />
+            <marker date="1512817773631" expanded="true" signature="4385:4433" ph="SELECT id, d... todo" />
+            <marker date="1512817773631" expanded="true" signature="4729:4776" ph="SELECT id, d... todo" />
+            <marker date="1512817773631" expanded="true" signature="5202:5233" ph="DELETE FROM todo... " />
+            <marker date="1512817773631" expanded="true" signature="5632:5689" ph="UPDATE todo... " />
+          </folding>
         </state>
       </provider>
     </entry>

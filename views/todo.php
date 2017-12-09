@@ -33,7 +33,7 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
     <div class='row'>
         <div class='col-md-12'>
             <h1>New todo</h1>
-            <form action="./todoadd" method="post">
+            <form action="/todoadd" method="post">
                 <div class='form-group'>
                     <input type="text" class="form-control" name="todo"></input><br/>
                     <input type="submit" value="Send" class='btn btn-block btn-lg btn-success'/>
@@ -59,7 +59,7 @@ Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
                 <?php
                 foreach($todos as $todo) {
                     $id = $todo['id'];
-                    $descrizione = $todo['descrizione'];
+                    $descrizione = Utilita::DB2HTML($todo['descrizione']);
                 ?>
                 <tr>
                     <td class="tdicon"><?= $id ?></td>

@@ -6,6 +6,7 @@ class Logout {
         if(isset($_COOKIE[GLOBAL_COOKIENAME])) {
             unset($_COOKIE[GLOBAL_COOKIENAME]);
             setcookie(GLOBAL_COOKIENAME, null, -1, '/');
+            sleep(1);
         }
 
         Flashmessage::Add('guest', 'login', 'Logout', 'Effettuato con successo', 'SUCCESS');

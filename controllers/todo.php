@@ -82,7 +82,7 @@ class TodoDelete {
         $todo = TodoEntity::ID($id);
 
         $messaggio = "Attenzione";
-        $elemento = "Cancellare ".$todo['id'].": ".$todo['descrizione']." ?";
+        $elemento = "Cancellare #".$todo['id'].": ".Utilita::DB2HTML($todo['descrizione'])." ?";
         $linkAnnulla = "/todo";
         $linkAzione = "/todo";
 
@@ -149,7 +149,7 @@ class TodoEntity {
         try {
 
             $query = MySQL::getInstance()->prepare("INSERT INTO todo (descrizione) VALUES (:descrizione)");
-            $query->bindValue(':descrizione', $todo, PDO::PARAM_STR);
+            $query->bindValue(':descrizione', Utilita::HTML2DB($todo), PDO::PARAM_STR);
             $result = $query->execute();
 
         }  catch (PDOException $e) {
@@ -208,7 +208,7 @@ class TodoEntity {
 
             $query = MySQL::getInstance()->prepare("UPDATE todo SET descrizione = :descrizione WHERE id = :id");
             $query->bindValue(':id', $id, PDO::PARAM_STR);
-            $query->bindValue(':descrizione', $todo, PDO::PARAM_STR);
+            $query->bindValue(':descrizione', Utilita::HTML2DB($todo), PDO::PARAM_STR);
             $result = $query->execute();
 
         }  catch (PDOException $e) {
