@@ -63,6 +63,7 @@ class Html_default {
         $menu = [
             'Home' => '/',
             'Todo' => '/todo',
+            'Utente' => '/utente',
             'Login' => '/login',
             'Logout' => '/logout',
         ];
