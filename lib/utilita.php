@@ -15,6 +15,7 @@ class Utilita {
         session_start();
 
         define("BR", "<br>");
+        define('DIR', __DIR__);
     }
 
     public static function GET_CLIENT_IP() {

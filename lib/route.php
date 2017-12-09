@@ -2,6 +2,21 @@
 
 class Route
 {
+    public $url;
+    public $controller;
+    public $authorization;
+    public $name;
+    public $menu;
+
+    public function __construct($url, $controller, $authorization, $name, $menu)
+    {
+        $this->url = $url;
+        $this->controller = $controller;
+        $this->authorization = $authorization;
+        $this->name = $name;
+        $this->menu = $menu;
+    }
+
     public static function serve($routes)
     {
         RouteHook::fire('before_request', compact('routes'));
@@ -115,5 +130,72 @@ class RouteHook
             self::$instance = new RouteHook();
         }
         return self::$instance;
+    }
+}
+
+class Routes {
+
+    private static $instance = NULL;
+    public $routes;
+
+    public function __construct()
+    {
+        $this->routes = [];
+    }
+
+    public function Add($obj)
+    {
+        $this->routes[] = $obj;
+    }
+
+    public function getAll()
+    {
+        return $this->routes;
+    }
+
+    public function getRoutes()
+    {
+        $ret = [];
+        foreach($this->routes as $route) {
+            $ret[$route->url] = $route->controller;
+        }
+        return $ret;
+    }
+
+    public static function getInstance() {
+        if (!self::$instance) {
+            self::$instance = new Routes();
+        }
+        return self::$instance;
+    }
+
+    public function Load() {
+        $this->Add(new Route("/", "Home", ["Amministratore", "Normale", "Visitatore"], "Home", true));
+        $this->Add(new Route("/notauthorized", "NotAuthorized", [], "Not Authorized", false));
+
+        $this->Add(new Route("/todo", "Todo", ["Amministratore", "Normale"], "Todo", true));
+        $this->Add(new Route("/todoadd", "TodoAdd", ["Amministratore", "Normale"], "Todoadd", false));
+        $this->Add(new Route("/todo/delete/:number", "TodoDelete", ["Amministratore", "Normale"], "TodoDelete", false));
+        $this->Add(new Route("/todo/modify/:number", "TodoModify", ["Amministratore", "Normale"], "TodoModify", false));
+
+        $this->Add(new Route("/utente", "Utente", ["Amministratore", "Normale", "Visitatore"], "Utenti", true));
+        $this->Add(new Route("/utente/delete/:number", "UtenteDelete", ["Amministratore", "Normale", "Visitatore"], "Utente delete", false));
+        $this->Add(new Route("/utente/modify/:number", "UtenteModify", ["Amministratore", "Normale", "Visitatore"], "Utente modify", false));
+
+        $this->Add(new Route("/login", "Login", [], "Login", true));
+        $this->Add(new Route("/logout", "Logout", ["Amministratore", "Normale", "Visitatore"], "Logout", true));
+
+        return $this;
+    }
+
+    public function getMenu()
+    {
+        $ret = [];
+        foreach($this->routes as $route) {
+            if($route->menu) {
+                $ret[$route->name] = $route->url;
+            }
+        }
+        return $ret;
     }
 }

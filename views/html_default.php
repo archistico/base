@@ -62,13 +62,7 @@ class Html_default {
         $file = '/'.$file;
         $tipologia = Autaut::LOGGATO_TIPOLOGIA();
 
-        $menu = [
-            'Home' => '/',
-            'Todo' => '/todo',
-            'Utente' => '/utente',
-            'Login' => '/login',
-            'Logout' => '/logout',
-        ];
+        $menu = Routes::getInstance()->Load()->getMenu();
 
         $linkHome = current($menu);
         $nomeHome = key($menu);
