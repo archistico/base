@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5bf18c9-e98d-4898-9404-e58402bdb26e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/utentedelete.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/utentemodify.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controllers/todo.php" afterPath="$PROJECT_DIR$/controllers/todo.php" />
       <change beforePath="$PROJECT_DIR$/controllers/utente.php" afterPath="$PROJECT_DIR$/controllers/utente.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/views/utente.php" afterPath="$PROJECT_DIR$/views/utente.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,14 +19,14 @@
       <file leaf-file-name="utente.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/utente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="250" column="27" lean-forward="false" selection-start-line="250" selection-start-column="27" selection-end-line="250" selection-end-column="27" />
+            <state relative-caret-position="738">
+              <caret line="242" column="8" lean-forward="false" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
               <folding>
-                <marker date="1512831427455" expanded="true" signature="6031:6155" ph="INSERT INTO todo... " />
-                <marker date="1512831427455" expanded="true" signature="7237:7284" ph="SELECT id, d... todo" />
-                <marker date="1512831427455" expanded="true" signature="7580:7621" ph="SELECT id, d... todo" />
-                <marker date="1512831427455" expanded="true" signature="8047:8086" ph="DELETE FROM todo... " />
-                <marker date="1512831427455" expanded="true" signature="8563:8766" ph="UPDATE todo... " />
+                <marker date="1512832604316" expanded="true" signature="8251:8375" ph="INSERT INTO todo... " />
+                <marker date="1512832604316" expanded="true" signature="9457:9504" ph="SELECT id, d... todo" />
+                <marker date="1512832604316" expanded="true" signature="9800:9841" ph="SELECT id, d... todo" />
+                <marker date="1512832604316" expanded="true" signature="10267:10306" ph="DELETE FROM todo... " />
+                <marker date="1512832604316" expanded="true" signature="10783:10986" ph="UPDATE todo... " />
               </folding>
             </state>
           </provider>
@@ -76,12 +75,13 @@
         <option value="$PROJECT_DIR$/views/todo.php" />
         <option value="$PROJECT_DIR$/views/tododelete.php" />
         <option value="$PROJECT_DIR$/views/todomodify.php" />
-        <option value="$PROJECT_DIR$/views/utente.php" />
         <option value="$PROJECT_DIR$/lib/utilita.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controllers/todo.php" />
-        <option value="$PROJECT_DIR$/controllers/utente.php" />
         <option value="$PROJECT_DIR$/views/utentedelete.php" />
+        <option value="$PROJECT_DIR$/views/utentemodify.php" />
+        <option value="$PROJECT_DIR$/views/utente.php" />
+        <option value="$PROJECT_DIR$/controllers/utente.php" />
       </list>
     </option>
   </component>
@@ -201,12 +201,12 @@
       <workItem from="1512573630505" duration="3520000" />
       <workItem from="1512743007839" duration="3694000" />
       <workItem from="1512753154597" duration="462000" />
-      <workItem from="1512813961814" duration="11095000" />
+      <workItem from="1512813961814" duration="12212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24530000" />
+    <option name="totallyTimeSpent" value="25647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1853" height="1055" extended-state="6" />
@@ -418,26 +418,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/utente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="124" column="40" lean-forward="false" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -488,16 +472,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/todomodify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="52" column="14" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="52" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/utentemodify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="106" column="44" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/utente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="102" column="26" lean-forward="true" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/utente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="250" column="27" lean-forward="false" selection-start-line="250" selection-start-column="27" selection-end-line="250" selection-end-column="27" />
+        <state relative-caret-position="738">
+          <caret line="242" column="8" lean-forward="false" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
           <folding>
-            <marker date="1512831427455" expanded="true" signature="6031:6155" ph="INSERT INTO todo... " />
-            <marker date="1512831427455" expanded="true" signature="7237:7284" ph="SELECT id, d... todo" />
-            <marker date="1512831427455" expanded="true" signature="7580:7621" ph="SELECT id, d... todo" />
-            <marker date="1512831427455" expanded="true" signature="8047:8086" ph="DELETE FROM todo... " />
-            <marker date="1512831427455" expanded="true" signature="8563:8766" ph="UPDATE todo... " />
+            <marker date="1512832604316" expanded="true" signature="8251:8375" ph="INSERT INTO todo... " />
+            <marker date="1512832604316" expanded="true" signature="9457:9504" ph="SELECT id, d... todo" />
+            <marker date="1512832604316" expanded="true" signature="9800:9841" ph="SELECT id, d... todo" />
+            <marker date="1512832604316" expanded="true" signature="10267:10306" ph="DELETE FROM todo... " />
+            <marker date="1512832604316" expanded="true" signature="10783:10986" ph="UPDATE todo... " />
           </folding>
         </state>
       </provider>
