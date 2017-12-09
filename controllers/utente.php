@@ -256,6 +256,18 @@ class UtenteModify {
  */
 
 class UtenteEntity {
+
+    public $utenteid;
+    public $denominazione;
+    public $indirizzo;
+    public $cf;
+    public $piva;
+    public $telefono;
+    public $email;
+    public $account;
+    public $password;
+    public $tipologia;
+
     public static function Add($denominazione, $indirizzo, $cf, $piva, $telefono, $email, $account, $password, $tipologia) {
         $result = false;
         try {
@@ -298,13 +310,13 @@ class UtenteEntity {
             $query = MySQL::getInstance()->prepare("SELECT * FROM utente WHERE utenteid = :id");
             $query->bindValue(':id', $id, PDO::PARAM_STR);
             $query->execute();
-            $todo = $query->fetch(PDO::FETCH_ASSOC);
+            $utente = $query->fetch(PDO::FETCH_ASSOC);
 
         }  catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
         }
 
-        return $todo;
+        return $utente;
     }
 
     public static function DELETE($id) {
@@ -344,5 +356,54 @@ class UtenteEntity {
         }
 
         return $result;
+    }
+
+    public static function CHECK_EMAIL_PASSWORD($email, $password) {
+        $check = false;
+        try {
+
+            $query = MySQL::getInstance()->prepare("SELECT password FROM utente WHERE email = :email");
+            $query->bindValue(':email', $email, PDO::PARAM_STR);
+            $query->execute();
+            $utente = $query->fetch(PDO::FETCH_ASSOC);
+
+            if($password==hash('sha512',($utente['password']))) {
+                $check = true;
+            }
+        } catch (PDOException $e) {
+            throw new PDOException("Error  : " . $e->getMessage());
+        }
+
+        return $check;
+    }
+
+    public static function FIND_BY_EMAIL_PASSWORD($email, $password) {
+        try {
+            $password=hash('sha512', $password);
+
+            $query = MySQL::getInstance()->prepare("SELECT password FROM utente WHERE email = :email AND password = :password");
+            $query->bindValue(':email', $email, PDO::PARAM_STR);
+            $query->bindValue(':password', $password, PDO::PARAM_STR);
+            $query->execute();
+            $ut = $query->fetch(PDO::FETCH_ASSOC);
+
+            $utente = new UtenteEntity();
+            $utente->utenteid = $ut['utenteid'];
+            $utente->denominazione = $ut['denominazione'];
+            $utente->indirizzo = $ut['indirizzo'];
+            $utente->cf = $ut['cf'];
+            $utente->piva = $ut['piva'];
+            $utente->telefono = $ut['telefono'];
+            $utente->email = $ut['email'];
+            $utente->account = $ut['account'];
+            $utente->password = $ut['password'];
+            $utente->tipologia = $ut['tipologia'];
+
+            return $utente;
+        } catch (PDOException $e) {
+            throw new PDOException("Error  : " . $e->getMessage());
+        }
+
+        return null;
     }
 }

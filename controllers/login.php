@@ -30,8 +30,8 @@ class Login {
             }
             // CONTROLLA SU DB SE: EMAIL E PASSWORD CORRISPONDONO
             if(empty($errors)) {
-                if(Utente::Check_email_password($email, $password)) {
-                    $utente = Utente::FIND_BY_EMAIL($email);
+                if(UtenteEntity::Check_email_password($email, $password)) {
+                    $utente = UtenteEntity::FIND_BY_EMAIL_PASSWORD($email, $password);
                     if(isset($_COOKIE[GLOBAL_COOKIENAME])) {
                         unset($_COOKIE[GLOBAL_COOKIENAME]);
                         setcookie(GLOBAL_COOKIENAME, null, -1, '/');
@@ -40,33 +40,32 @@ class Login {
                     if(!isset($_COOKIE[GLOBAL_COOKIENAME])) {
                         $value = md5(rand(0,10000000));
                         setcookie(GLOBAL_COOKIENAME, $value, time()+86400);
-                        
+
                         // NUOVO GESTIONE PER DB
                         $accesso = new Accesso();
                         $accesso->cookiename = $value;
                         $accesso->utentefk = $utente->utenteid;
-                        $accesso->utenteruolo= $utente->getRuolo()->descrizione;
+                        $accesso->utentetipologia= $utente->tipologia;
                         $accesso->setNow();
                         $accesso->ip = Utilita::GET_CLIENT_IP();
                         $accesso->errore = '-';
 
-                        $accesso->Insert();
+                        $accesso->Add();
                     }
-                    Utilita::REDIRECT('index.php');
-                    exit();
+                    Utilita::REDIRECT('/');
                 } else {
                     $errors[] = 'Password non corretta';
+
                     // INSERISCO UN ACCESSO FALLATO
-                    // NUOVO GESTIONE PER DB
                     $accesso = new Accesso();
                     $accesso->cookiename = 'Non impostato';
                     $accesso->utentefk = -1;
-                    $accesso->utenteruolo= "-";
+                    $accesso->utentetipologia = "-";
                     $accesso->setNow();
                     $accesso->ip = Utilita::GET_CLIENT_IP();
                     $accesso->errore = $email;
 
-                    $accesso->Insert();
+                    $accesso->Add();
                 }
             }
 
@@ -83,7 +82,7 @@ class Login {
         }
 
         // Rinvia alla pagina
-        //header("Location: /login");
+        Utilita::REDIRECT('/login');
 
     } // FINE POST
 }
