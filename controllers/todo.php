@@ -84,7 +84,6 @@ class TodoDelete {
         $messaggio = "Attenzione";
         $elemento = "Cancellare #".$todo['id'].": ".Utilita::DB2HTML($todo['descrizione'])." ?";
         $linkAnnulla = "/todo";
-        $linkAzione = "/todo";
 
         include("views/tododelete.php");
     }

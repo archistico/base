@@ -18,5 +18,7 @@ Route::serve(array(
     "/login" => "Login",
     "/logout" => "Logout",
     "/utente" => "Utente",
+    "/utente/delete/:number" => "UtenteDelete",
+    "/utente/modify/:number" => "UtenteModify",
 
 ));

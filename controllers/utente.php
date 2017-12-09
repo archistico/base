@@ -115,32 +115,31 @@ class UtenteDelete {
 
         if(empty($errors)) {
 
-            if(!TodoEntity::DELETE($id)) {
+            if(!UtenteEntity::DELETE($id)) {
                 $errors[] = 'Errore inserimento nella base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'todo', 'ok', 'cancellato', 'SUCCESS');
+                Flashmessage::ADD($utentefk, 'utente', 'ok', 'cancellato', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'todo', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD($utentefk, 'utente', 'Attenzione', $testo, 'ALERT');
             }
         }
 
         // Rinvia alla pagina
-        header("Location: /todo");
+        header("Location: /utente");
     }
 
     function get($id) {
-        $todo = TodoEntity::ID($id);
+        $el = UtenteEntity::ID($id);
 
         $messaggio = "Attenzione";
-        $elemento = "Cancellare #".$todo['id'].": ".Utilita::DB2HTML($todo['descrizione'])." ?";
-        $linkAnnulla = "/todo";
-        $linkAzione = "/todo";
+        $elemento = "Cancellare #".$el['utenteid'].": ".Utilita::DB2HTML($el['denominazione'])." ?";
+        $linkAnnulla = "/utente";
 
-        include("views/tododelete.php");
+        include("views/utentedelete.php");
     }
 }
 
@@ -237,7 +236,7 @@ class UtenteEntity {
     public static function ID($id) {
         try {
 
-            $query = MySQL::getInstance()->prepare("SELECT id, descrizione FROM todo WHERE id = :id");
+            $query = MySQL::getInstance()->prepare("SELECT * FROM utente WHERE utenteid = :id");
             $query->bindValue(':id', $id, PDO::PARAM_STR);
             $query->execute();
             $todo = $query->fetch(PDO::FETCH_ASSOC);
@@ -253,7 +252,7 @@ class UtenteEntity {
         $result = false;
         try {
 
-            $query = MySQL::getInstance()->prepare("DELETE FROM todo WHERE id = :id");
+            $query = MySQL::getInstance()->prepare("DELETE FROM utente WHERE utenteid = :id");
             $query->bindValue(':id', $id, PDO::PARAM_STR);
             $result = $query->execute();
 
@@ -264,13 +263,21 @@ class UtenteEntity {
         return $result;
     }
 
-    public static function MODIFY($id,$todo) {
+    public static function MODIFY($id, $denominazione, $indirizzo, $cf, $piva, $telefono, $email, $account, $password, $tipologia) {
         $result = false;
         try {
 
-            $query = MySQL::getInstance()->prepare("UPDATE todo SET descrizione = :descrizione WHERE id = :id");
+            $query = MySQL::getInstance()->prepare("UPDATE utente SET denominazione=:denominazione, indirizzo=:indirizzo, cf=:cf, piva=:piva, telefono=:telefono, email=:email, account=:account, password=:password, tipologia=:tipologia WHERE utenteid = :id");
             $query->bindValue(':id', $id, PDO::PARAM_STR);
-            $query->bindValue(':descrizione', Utilita::HTML2DB($todo), PDO::PARAM_STR);
+            $query->bindValue(':denominazione', Utilita::HTML2DB($denominazione), PDO::PARAM_STR);
+            $query->bindValue(':indirizzo', Utilita::HTML2DB($indirizzo), PDO::PARAM_STR);
+            $query->bindValue(':cf', Utilita::HTML2DB($cf), PDO::PARAM_STR);
+            $query->bindValue(':piva', Utilita::HTML2DB($piva), PDO::PARAM_STR);
+            $query->bindValue(':telefono', Utilita::HTML2DB($telefono), PDO::PARAM_STR);
+            $query->bindValue(':email', Utilita::HTML2DB($email), PDO::PARAM_STR);
+            $query->bindValue(':account', Utilita::HTML2DB($account), PDO::PARAM_STR);
+            $query->bindValue(':password', Utilita::HTML2DB($password), PDO::PARAM_STR);
+            $query->bindValue(':tipologia', Utilita::HTML2DB($tipologia), PDO::PARAM_STR);
             $result = $query->execute();
 
         }  catch (PDOException $e) {
