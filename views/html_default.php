@@ -59,6 +59,7 @@ class Html_default {
 
     public static function MENU($file) {
         // MENU
+        $file = '/'.$file;
 
         $menu = [
             'Home' => '/',
@@ -86,12 +87,12 @@ class Html_default {
         while ($link = current($menu)) {
             $nome = key($menu);
             if($link == $file) {
-                $active = true;
+                $active = 'active';
             } else {
-                $active = false;
+                $active = '';
             }
 
-            echo "<li class='nav-item $active'><a class='nav-link' href='$link'>$nome</a></li>";
+            echo "<li class='nav-item $active'><a class='nav-link' href='$link'>$nome </a></li>";
             next($menu);
         }
 

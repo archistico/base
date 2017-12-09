@@ -2,7 +2,6 @@
 require("html_default.php");
 
 $filename_corrente = File::FILENAME(__FILE__);
-$basename_corrente = File::BASENAME(__FILE__);
 
 /* -----------------------------
  *           LOGGIN

@@ -2,7 +2,6 @@
 require("html_default.php");
 
 $filename_corrente = File::FILENAME(__FILE__);
-$basename_corrente = File::BASENAME(__FILE__);
 
 /* -----------------------------
  *           LOGGIN
@@ -20,7 +19,7 @@ $csrfname = $filename_corrente.":".$utentefk.":csrf";
  */
 Html_default::HEAD("Base - ".strtoupper($filename_corrente));
 Html_default::OPENCONTAINER();
-Html_default::MENU($basename_corrente);
+Html_default::MENU($filename_corrente);
 Html_default::JUMBOTRON("Studio Archistico", "Utente");
 
 /* -----------------------------
