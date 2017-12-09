@@ -178,11 +178,11 @@ class Routes {
         $this->Add(new Route("/todo/delete/:number", "TodoDelete", ["Amministratore", "Normale"], "TodoDelete", false));
         $this->Add(new Route("/todo/modify/:number", "TodoModify", ["Amministratore", "Normale"], "TodoModify", false));
 
-        $this->Add(new Route("/utente", "Utente", ["Amministratore", "Normale", "Visitatore"], "Utenti", true));
-        $this->Add(new Route("/utente/delete/:number", "UtenteDelete", ["Amministratore", "Normale", "Visitatore"], "Utente delete", false));
-        $this->Add(new Route("/utente/modify/:number", "UtenteModify", ["Amministratore", "Normale", "Visitatore"], "Utente modify", false));
+        $this->Add(new Route("/utente", "Utente", ["Amministratore"], "Utenti", true));
+        $this->Add(new Route("/utente/delete/:number", "UtenteDelete", ["Amministratore"], "Utente delete", false));
+        $this->Add(new Route("/utente/modify/:number", "UtenteModify", ["Amministratore"], "Utente modify", false));
 
-        $this->Add(new Route("/login", "Login", [], "Login", true));
+        $this->Add(new Route("/login", "Login", [], "Login", false));
         $this->Add(new Route("/logout", "Logout", ["Amministratore", "Normale", "Visitatore"], "Logout", true));
 
         return $this;

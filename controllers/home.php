@@ -6,7 +6,7 @@ class Home {
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
         */
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale']);
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
         $utentefk = Autaut::LOGGATO();
 
         $filename_corrente = File::FILENAME(__FILE__);

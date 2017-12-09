@@ -62,7 +62,14 @@ class Html_default {
         $file = '/'.$file;
         $tipologia = Autaut::LOGGATO_TIPOLOGIA();
 
-        $menu = Routes::getInstance()->Load()->getMenu();
+        $routes = Routes::getInstance()->Load()->getAll();
+
+        $menu = [];
+        foreach($routes as $route) {
+            if($route->menu && in_array($tipologia, $route->authorization)) {
+                $menu[$route->name] = $route->url;
+            }
+        }
 
         $linkHome = current($menu);
         $nomeHome = key($menu);
