@@ -5,14 +5,14 @@ require("html_default.php");
  *           HTML
  * -----------------------------
  */
-Html_default::HEAD("Base - ".strtoupper($filename_corrente), true);
+Html_default::HEAD("Base - ".strtoupper(File::FILENAME(__FILE__)), true);
 Html_default::OPENCONTAINER();
 
 /* -----------------------------
  *       CORPO FILE
  * -----------------------------
  */
-Html_default::SHOW_NOTICES(Flashmessage::READ('guest', $filename_corrente));
+Html_default::SHOW_NOTICES(Flashmessage::READ('guest', File::FILENAME(__FILE__)));
 
 ?>
     <form class='form-signin' name='login_form' id='login_form' onsubmit='DoSubmit();' method='post'>

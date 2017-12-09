@@ -6,12 +6,9 @@ class Utente {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -26,12 +23,9 @@ class Utente {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -111,13 +105,13 @@ class Utente {
             if(!UtenteEntity::Add($denominazione, $indirizzo, $cf, $piva, $telefono, $email, $account, $password, $tipologia)) {
                 $errors[] = 'Errore inserimento nella base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'utente', 'ok', 'Aggiunto', 'SUCCESS');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'utente', 'ok', 'Aggiunto', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'utente', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'utente', 'Attenzione', $testo, 'ALERT');
             }
         }
 
@@ -138,12 +132,9 @@ class UtenteDelete {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -163,13 +154,13 @@ class UtenteDelete {
             if(!UtenteEntity::DELETE($id)) {
                 $errors[] = 'Errore inserimento nella base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'utente', 'ok', 'cancellato', 'SUCCESS');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'utente', 'ok', 'cancellato', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'utente', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'utente', 'Attenzione', $testo, 'ALERT');
             }
         }
 
@@ -182,12 +173,9 @@ class UtenteDelete {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -215,12 +203,9 @@ class UtenteModify {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -305,13 +290,13 @@ class UtenteModify {
             if(!UtenteEntity::Modify($id, $denominazione, $indirizzo, $cf, $piva, $telefono, $email, $account, $password, $tipologia)) {
                 $errors[] = 'Errore inserimento nella base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'utente', 'ok', 'Modificato', 'SUCCESS');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'utente', 'ok', 'Modificato', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'utente', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'utente', 'Attenzione', $testo, 'ALERT');
             }
         }
 
@@ -324,12 +309,9 @@ class UtenteModify {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE

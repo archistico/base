@@ -3,7 +3,6 @@
 class Login {
     function get() {
         // Creo il formid per questa sessione
-        $filename_corrente = File::FILENAME(__FILE__);
         $csrfname = "login:csrf";
         $_SESSION[$csrfname] = md5(rand(0,10000000));
 

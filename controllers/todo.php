@@ -5,12 +5,9 @@ class Todo {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -32,12 +29,9 @@ class TodoAdd {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -53,17 +47,17 @@ class TodoAdd {
         }
 
         if(empty($errors)) {
-            
+
             if(!TodoEntity::Add($todo)) {
                 $errors[] = 'Errore inserimento nella base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'todo', 'ok', 'Aggiunto', 'SUCCESS');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'todo', 'ok', 'Aggiunto', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'todo', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'todo', 'Attenzione', $testo, 'ALERT');
             }
         }
 
@@ -82,12 +76,9 @@ class TodoDelete {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -103,17 +94,17 @@ class TodoDelete {
         }
 
         if(empty($errors)) {
-            
+
             if(!TodoEntity::DELETE($id)) {
                 $errors[] = 'Errore inserimento nella base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'todo', 'ok', 'cancellato', 'SUCCESS');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'todo', 'ok', 'cancellato', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'todo', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'todo', 'Attenzione', $testo, 'ALERT');
             }
         }
 
@@ -126,12 +117,9 @@ class TodoDelete {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -159,12 +147,9 @@ class TodoModify {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -190,13 +175,13 @@ class TodoModify {
             if(!TodoEntity::MODIFY($id, $todo)) {
                 $errors[] = 'Errore modifica base dati';
             } else {
-                Flashmessage::ADD($utentefk, 'todo', 'ok', 'Modificato', 'SUCCESS');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'todo', 'ok', 'Modificato', 'SUCCESS');
             }
         }
 
         if(!empty($errors)) {
             foreach($errors as $testo) {
-                Flashmessage::ADD($utentefk, 'todo', 'Attenzione', $testo, 'ALERT');
+                Flashmessage::ADD(Autaut::LOGGATO(), 'todo', 'Attenzione', $testo, 'ALERT');
             }
         }
 
@@ -209,12 +194,9 @@ class TodoModify {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(['Amministratore', 'Normale']);
-        $utentefk = Autaut::LOGGATO();
+         */
 
-        $filename_corrente = File::FILENAME(__FILE__);
-        $csrfname = $filename_corrente.":".$utentefk.":csrf";
+        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -244,7 +226,7 @@ class TodoEntity {
         }  catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
         }
-        
+
         return $result;
     }
 
@@ -287,7 +269,7 @@ class TodoEntity {
         }  catch (PDOException $e) {
             throw new PDOException("Error  : " . $e->getMessage());
         }
-        
+
         return $result;
     }
 

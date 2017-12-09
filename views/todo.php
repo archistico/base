@@ -5,16 +5,16 @@ require("html_default.php");
  *           HTML
  * -----------------------------
  */
-Html_default::HEAD("Base - ".strtoupper($filename_corrente));
+Html_default::HEAD("Base - ".strtoupper(File::FILENAME(__FILE__)));
 Html_default::OPENCONTAINER();
-Html_default::MENU($filename_corrente);
+Html_default::MENU(File::FILENAME(__FILE__));
 Html_default::JUMBOTRON("Studio Archistico", "Todo");
 
 /* -----------------------------
  *       CORPO FILE
  * -----------------------------
  */
-Html_default::SHOW_NOTICES(Flashmessage::READ($utentefk, $filename_corrente));
+Html_default::SHOW_NOTICES(Flashmessage::READ(Autaut::LOGGATO(), File::FILENAME(__FILE__)));
 
 ?>
     <div class='row'>
