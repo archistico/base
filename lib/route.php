@@ -169,7 +169,34 @@ class Routes {
         return self::$instance;
     }
 
+    public function getMenu()
+    {
+        $ret = [];
+        foreach($this->routes as $route) {
+            if($route->menu) {
+                $ret[$route->name] = $route->url;
+            }
+        }
+        return $ret;
+    }
+
+    public function getCredential($class)
+    {
+        $ret = null;
+
+        foreach($this->routes as $route) {
+            if(strtolower($route->controller) == strtolower($class)) {
+                $ret = $route->authorization;
+            }
+        }
+
+        return $ret;
+    }
+
     public function Load() {
+
+        $this->routes = null;
+
         $this->Add(new Route("/", "Home", ["Amministratore", "Normale", "Visitatore"], "Home", true));
         $this->Add(new Route("/notauthorized", "NotAuthorized", [], "Not Authorized", false));
 
@@ -186,17 +213,6 @@ class Routes {
         $this->Add(new Route("/logout", "Logout", ["Amministratore", "Normale", "Visitatore"], "Logout", true));
 
         return $this;
-    }
-
-    public function getMenu()
-    {
-        $ret = [];
-        foreach($this->routes as $route) {
-            if($route->menu) {
-                $ret[$route->name] = $route->url;
-            }
-        }
-        return $ret;
     }
 
 }

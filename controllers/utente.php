@@ -6,9 +6,8 @@ class Utente {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-         */
-
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        */
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -23,9 +22,8 @@ class Utente {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-         */
-
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        */
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -132,9 +130,8 @@ class UtenteDelete {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-         */
-
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        */
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -173,9 +170,8 @@ class UtenteDelete {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-         */
-
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        */
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -203,9 +199,8 @@ class UtenteModify {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-         */
-
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        */
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
@@ -309,9 +304,8 @@ class UtenteModify {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
-         */
-
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        */
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE

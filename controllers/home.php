@@ -6,7 +6,7 @@ class Home {
          *      AUTENTICAZIONE / AUTORIZZAZIONE
          * ----------------------------------------
         */
-        Autaut::CHECK_CREDENTIAL(['Amministratore','Normale', 'Visitatore']);
+        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
 
         /* ----------------------------------------
          *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
