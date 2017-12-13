@@ -35,7 +35,7 @@ Html_default::SHOW_NOTICES(Flashmessage::READ(Autaut::LOGGATO(), File::FILENAME(
         </form>
         </div>
     </div>
-
+    </div>
 <?php
 /* -----------------------------
  *      FINE CORPO FILE

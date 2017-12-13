@@ -10,6 +10,7 @@ require_once('lib/accesso.php');
 Utilita::PARAMETRI_INIZIALI();
 
 // Caricamento controller
+require("controllers/controller.php");
 require("controllers/home.php");
 require("controllers/todo.php");
 require("controllers/utente.php");

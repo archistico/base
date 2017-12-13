@@ -1,6 +1,6 @@
 <?php
 
-class Utente {
+class Utente extends Controller {
     function get() {
 
         /* ----------------------------------------
@@ -124,7 +124,7 @@ class Utente {
  * -------------------------------------------------
  */
 
-class UtenteDelete {
+class UtenteDelete extends Controller {
     function post() {
 
         /* ----------------------------------------
@@ -193,7 +193,7 @@ class UtenteDelete {
  * -------------------------------------------------
  */
 
-class UtenteModify {
+class UtenteModify extends Controller {
     function post() {
 
         /* ----------------------------------------

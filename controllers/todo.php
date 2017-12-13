@@ -1,6 +1,6 @@
 <?php
 
-class Todo {
+class Todo extends Controller {
     function get() {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
@@ -23,7 +23,7 @@ class Todo {
  * -------------------------------------------------
  */
 
-class TodoAdd {
+class TodoAdd extends Controller {
     function post() {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
@@ -69,7 +69,7 @@ class TodoAdd {
  * -------------------------------------------------
  */
 
-class TodoDelete {
+class TodoDelete extends Controller {
     function post() {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
@@ -138,7 +138,7 @@ class TodoDelete {
  * -------------------------------------------------
  */
 
-class TodoModify {
+class TodoModify extends Controller {
     function post() {
         /* ----------------------------------------
          *      AUTENTICAZIONE / AUTORIZZAZIONE
