@@ -1,19 +1,11 @@
 <?php
 
 class Home extends Controller {
-    function get() {
+    function __construct() {
+        parent::__construct(get_class());
+    }
 
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-        
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
+    function get() {
         include("views/home.php");
     }
 }

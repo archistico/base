@@ -1,18 +1,12 @@
 <?php
 
 class Todo extends Controller {
+    
+    function __construct() {
+        parent::__construct(get_class());
+    }
+
     function get() {
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-
         $todos = TodoEntity::Lista();
         include("views/todo.php");
     }
@@ -24,17 +18,11 @@ class Todo extends Controller {
  */
 
 class TodoAdd extends Controller {
-    function post() {
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
+    function __construct() {
+        parent::__construct(get_class());
+    }
 
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
+    function post() {
 
         $errors = [];
 
@@ -70,17 +58,12 @@ class TodoAdd extends Controller {
  */
 
 class TodoDelete extends Controller {
-    function post() {
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
+    
+    function __construct() {
+        parent::__construct(get_class());
+    }
 
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
+    function post() {
 
         $errors = [];
 
@@ -111,18 +94,6 @@ class TodoDelete extends Controller {
 
     function get($id) {
 
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-
-
         $todo = TodoEntity::ID($id);
 
         $messaggio = "Attenzione";
@@ -139,18 +110,13 @@ class TodoDelete extends Controller {
  */
 
 class TodoModify extends Controller {
+    
+    function __construct() {
+        parent::__construct(get_class());
+    }
+
     function post() {
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-
+        
         $errors = [];
 
         if (isset($_POST['id']) && strlen(trim($_POST['id'])) > 0) {
@@ -185,18 +151,7 @@ class TodoModify extends Controller {
     }
 
     function get($id) {
-
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-
+        
         $todo = TodoEntity::ID($id);
         $linkAnnulla = "/todo";
         include("views/todomodify.php");

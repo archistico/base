@@ -39,7 +39,7 @@ class Login {
                     }
                     if(!isset($_COOKIE[GLOBAL_COOKIENAME])) {
                         $value = md5(rand(0,10000000));
-                        setcookie(GLOBAL_COOKIENAME, $value, time()+86400);
+                        setcookie(GLOBAL_COOKIENAME, $value);
 
                         // NUOVO GESTIONE PER DB
                         $accesso = new Accesso();

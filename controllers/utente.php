@@ -1,34 +1,18 @@
 <?php
 
 class Utente extends Controller {
+
+    function __construct() {
+        parent::__construct(get_class());
+    }
+    
     function get() {
-
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
 
         $utenti = UtenteEntity::Lista();
         include("views/utente.php");
     }
 
     function post() {
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
 
         $errors = [];
 
@@ -125,18 +109,12 @@ class Utente extends Controller {
  */
 
 class UtenteDelete extends Controller {
+
+    function __construct() {
+        parent::__construct(get_class());
+    }
+
     function post() {
-
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
 
         $errors = [];
 
@@ -167,17 +145,6 @@ class UtenteDelete extends Controller {
 
     function get($id) {
 
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-
         $el = UtenteEntity::ID($id);
 
         $messaggio = "Attenzione";
@@ -194,18 +161,12 @@ class UtenteDelete extends Controller {
  */
 
 class UtenteModify extends Controller {
+
+    function __construct() {
+        parent::__construct(get_class());
+    }
+
     function post() {
-
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
 
         $errors = [];
 
@@ -300,17 +261,6 @@ class UtenteModify extends Controller {
     }
 
     function get($id) {
-
-        /* ----------------------------------------
-         *      AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
-        Autaut::CHECK_CREDENTIAL(Routes::getInstance()->Load()->getCredential(get_class()));
-
-        /* ----------------------------------------
-         *   FINE AUTENTICAZIONE / AUTORIZZAZIONE
-         * ----------------------------------------
-        */
 
         $utente = UtenteEntity::ID($id);
         $linkAnnulla = "/utente";
